@@ -1,0 +1,1052 @@
+<!--
+  First500days — Global Talent Visa Programme page body
+  Paste this whole file into ONE Elementor "HTML" widget on the /global-talent-visa/ page
+  (Template: Elementor Full Width). It contains no header, footer or logo — the site's
+  existing header/footer templates render around it.
+
+  BOOKING LINK: change the single value in data-booking-link below (on the root div).
+  Every "Book a / Book Your Profile Assessment" button reads it. Accepts a full URL
+  (e.g. Calendly) or a Tally hash link (e.g. #tally-open=XXXXXX&tally-layout=modal).
+  While it still reads [BOOKING_LINK], the buttons fall back to /contact-us/.
+  The sticky "Book Free Consultation" button (docked into the existing site header on this
+  page by the script at the bottom) uses the same value.
+
+  TESTIMONIALS: the testimonials section contains ILLUSTRATIVE placeholders only. Replace them
+  with verified, consented testimonials, or delete the section, before publishing.
+-->
+<div class="f5d-gtv-page" data-booking-link="[BOOKING_LINK]">
+
+<style>
+.f5d-gtv-page{--gtv-navy:#0B1220;--gtv-navy-2:#0F1B2E;--gtv-navy-3:#111C39;--gtv-blue:#2E7BC4;--gtv-blue-l:#5AB0E3;--gtv-sky:#F5F9FD;--gtv-sky-2:#EEF5FC;--gtv-border:#D6E2EF;--gtv-border-soft:#E7EEF6;--gtv-ink:#0B1220;--gtv-body:#4B5563;--gtv-muted:#6B7280;--gtv-d-body:#B9C3D0;--gtv-d-muted:#9CA3AF;--gtv-grad:linear-gradient(135deg,#5AB0E3 0%,#2E7BC4 100%);--gtv-ease:cubic-bezier(.22,.8,.36,1);
+  font-family:'Poppins',system-ui,-apple-system,sans-serif;color:var(--gtv-ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;width:100%}
+.f5d-gtv-page *,.f5d-gtv-page *::before,.f5d-gtv-page *::after{box-sizing:border-box}
+.f5d-gtv-page h1,.f5d-gtv-page h2,.f5d-gtv-page h3,.f5d-gtv-page p,.f5d-gtv-page ul,.f5d-gtv-page ol{margin:0;padding:0}
+.f5d-gtv-page h1,.f5d-gtv-page h2,.f5d-gtv-page h3{font-family:'Poppins',sans-serif;color:inherit}
+.f5d-gtv-page ul,.f5d-gtv-page ol{list-style:none}
+.f5d-gtv-page a{text-decoration:none}
+.f5d-gtv-page svg.gtv-i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.f5d-gtv-page .gtv-sprite{position:absolute;width:0;height:0;overflow:hidden}
+.f5d-gtv-page a:focus-visible,.f5d-gtv-page button:focus-visible,.f5d-gtv-page summary:focus-visible{outline:2px solid var(--gtv-blue-l);outline-offset:3px;border-radius:6px}
+.f5d-gtv-page .gtv-dark a:focus-visible,.f5d-gtv-page .gtv-dark summary:focus-visible{outline-color:#8BC5EE}
+
+/* layout */
+.f5d-gtv-page section{position:relative;scroll-margin-top:88px}
+.f5d-gtv-page .gtv-wrap{max-width:1280px;margin:0 auto;padding:112px 40px;position:relative}
+.f5d-gtv-page .gtv-dark{background:linear-gradient(145deg,#0B1220 0%,#0F1B2E 55%,#111C39 100%);color:#FFF;overflow:hidden}
+.f5d-gtv-page .gtv-light{background:linear-gradient(180deg,#F9FBFD 0%,#F0F6FC 100%)}
+.f5d-gtv-page .gtv-sky{background:linear-gradient(180deg,#EEF5FC 0%,#E6F0FA 100%)}
+.f5d-gtv-page .gtv-white{background:#FFF}
+.f5d-gtv-page .gtv-gridbg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:40px 40px;-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 78%);mask-image:radial-gradient(ellipse at center,#000 30%,transparent 78%)}
+.f5d-gtv-page .gtv-glow{position:absolute;border-radius:50%;filter:blur(30px);pointer-events:none}
+
+/* type */
+.f5d-gtv-page .gtv-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--gtv-blue);letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+.f5d-gtv-page .gtv-dark .gtv-eyebrow{color:#78BEEB}
+.f5d-gtv-page .gtv-h2{font-weight:700;font-size:clamp(30px,4.4vw,48px);line-height:1.1;letter-spacing:-.02em;color:var(--gtv-ink);margin-bottom:18px}
+.f5d-gtv-page .gtv-dark .gtv-h2{color:#FFF}
+.f5d-gtv-page .gtv-lead{font-size:16px;line-height:1.7;color:var(--gtv-body)}
+.f5d-gtv-page .gtv-dark .gtv-lead{color:var(--gtv-d-body)}
+.f5d-gtv-page .gtv-grad-text{background:var(--gtv-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.f5d-gtv-page .gtv-dark .gtv-grad-text{background:linear-gradient(135deg,#8BC5EE 0%,#4696D7 100%);-webkit-background-clip:text;background-clip:text}
+.f5d-gtv-page .gtv-head{max-width:760px;margin:0 auto 56px;text-align:center}
+.f5d-gtv-page .gtv-head .gtv-lead+.gtv-lead{margin-top:14px}
+
+/* buttons */
+.f5d-gtv-page .gtv-btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-family:inherit;font-size:15px;font-weight:600;line-height:1.2;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .2s ease,border-color .2s ease,color .2s ease;position:relative;overflow:hidden;text-align:center}
+.f5d-gtv-page .gtv-btn-primary{background:var(--gtv-grad);color:#FFF;box-shadow:0 6px 18px -6px rgba(46,123,196,.5);border:0}
+.f5d-gtv-page .gtv-btn-primary::after{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s ease}
+.f5d-gtv-page .gtv-btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px -6px rgba(46,123,196,.65);color:#FFF}
+.f5d-gtv-page .gtv-btn-primary:hover::after{left:130%}
+.f5d-gtv-page .gtv-btn-ghost{background:rgba(255,255,255,.04);color:#FFF;border:1px solid rgba(255,255,255,.22);font-weight:500}
+.f5d-gtv-page .gtv-btn-ghost:hover{background:rgba(255,255,255,.09);border-color:rgba(139,197,238,.6);color:#FFF;transform:translateY(-2px)}
+.f5d-gtv-page .gtv-arrow{display:inline-block;transition:transform .25s ease}
+.f5d-gtv-page .gtv-btn:hover .gtv-arrow{transform:translateX(4px)}
+.f5d-gtv-page .gtv-btn-ghost:hover .gtv-arrow-down{transform:translateY(3px)}
+.f5d-gtv-page .gtv-ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+/* cards */
+.f5d-gtv-page .gtv-card{background:#FFF;border:1.5px solid var(--gtv-border);border-radius:20px;padding:28px;position:relative;transition:transform .3s var(--gtv-ease),box-shadow .3s var(--gtv-ease),border-color .3s ease}
+.f5d-gtv-page .gtv-card:hover{transform:translateY(-4px);border-color:#B8D1EA;box-shadow:0 24px 44px -22px rgba(46,123,196,.28)}
+.f5d-gtv-page .gtv-card h3{font-weight:700;font-size:18px;line-height:1.3;letter-spacing:-.01em;color:var(--gtv-ink);margin-bottom:8px}
+.f5d-gtv-page .gtv-card p{font-size:14.5px;line-height:1.65;color:var(--gtv-muted)}
+.f5d-gtv-page .gtv-icon{width:48px;height:48px;border-radius:12px;background:var(--gtv-sky);border:1px solid #E3EDF7;color:var(--gtv-blue);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .3s ease,color .3s ease,border-color .3s ease}
+.f5d-gtv-page .gtv-card:hover .gtv-icon{background:var(--gtv-grad);color:#FFF;border-color:transparent}
+.f5d-gtv-page .gtv-dcard{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:30px;transition:transform .3s var(--gtv-ease),border-color .3s ease,background .3s ease}
+.f5d-gtv-page .gtv-dcard:hover{transform:translateY(-4px);border-color:rgba(139,197,238,.45);background:rgba(255,255,255,.065)}
+.f5d-gtv-page .gtv-dcard h3{font-weight:700;font-size:19px;line-height:1.3;color:#FFF;margin-bottom:10px}
+.f5d-gtv-page .gtv-dcard p{font-size:14.5px;line-height:1.7;color:var(--gtv-d-body)}
+.f5d-gtv-page .gtv-dcard .gtv-icon{background:rgba(90,176,227,.12);border-color:rgba(90,176,227,.25);color:#8BC5EE}
+.f5d-gtv-page .gtv-dcard:hover .gtv-icon{background:var(--gtv-grad);color:#FFF}
+.f5d-gtv-page .gtv-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+
+/* hero */
+.f5d-gtv-page .gtv-hero{background:linear-gradient(135deg,#0B1220 0%,#0F1B2E 50%,#1B3B67 100%)}
+.f5d-gtv-page .gtv-hero .gtv-wrap{max-width:1380px;padding:88px 40px 104px;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.f5d-gtv-page .gtv-hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border:1px solid rgba(90,176,227,.28);background:rgba(90,176,227,.08);border-radius:999px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#CFE6F8;margin-bottom:26px}
+.f5d-gtv-page .gtv-hero-eyebrow .gtv-sep{width:1px;height:12px;background:rgba(255,255,255,.3)}
+.f5d-gtv-page .gtv-dot{width:7px;height:7px;border-radius:50%;background:var(--gtv-blue-l);box-shadow:0 0 0 4px rgba(90,176,227,.18)}
+.f5d-gtv-page .gtv-h1{font-weight:700;font-size:clamp(36px,4.6vw,58px);line-height:1.06;letter-spacing:-.025em;color:#FFF;margin-bottom:24px}
+.f5d-gtv-page .gtv-h1 .gtv-h1-sub{display:block;margin-top:10px}
+.f5d-gtv-page .gtv-hero-text{font-size:16.5px;line-height:1.75;color:var(--gtv-d-body);max-width:600px;margin-bottom:36px}
+.f5d-gtv-page .gtv-hero-note{margin-top:22px;font-size:12.5px;color:var(--gtv-d-muted);display:flex;gap:8px;align-items:center}
+.f5d-gtv-page .gtv-hero-note svg{width:16px;height:16px;color:#78BEEB}
+.f5d-gtv-page .gtv-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.f5d-gtv-page .gtv-tag-blue{background:rgba(90,176,227,.14);color:#8BC5EE;border:1px solid rgba(90,176,227,.3)}
+/* hero: Profile Assessment dashboard (UI built in HTML/CSS, not imagery) */
+.f5d-gtv-page .gtv-dash-wrap{position:relative;justify-self:end;width:100%;max-width:540px}
+.f5d-gtv-page .gtv-dash{position:relative;z-index:1;background:linear-gradient(160deg,rgba(255,255,255,.085) 0%,rgba(255,255,255,.04) 100%);border:1px solid rgba(255,255,255,.14);border-radius:22px;overflow:hidden;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 50px 90px -40px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.08)}
+.f5d-gtv-page .gtv-dash-chrome{display:flex;align-items:center;gap:7px;padding:12px 18px;background:rgba(11,18,32,.45);border-bottom:1px solid rgba(255,255,255,.08)}
+.f5d-gtv-page .gtv-dash-chrome i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.16)}
+.f5d-gtv-page .gtv-dash-chrome i:first-child{background:rgba(90,176,227,.6)}
+.f5d-gtv-page .gtv-dash-path{margin-left:10px!important;flex:1;min-width:0;font-size:11px;color:var(--gtv-d-muted);letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06)}
+.f5d-gtv-page .gtv-dash-body{padding:24px 24px 22px}
+.f5d-gtv-page .gtv-dash-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.f5d-gtv-page .gtv-dash-badge{width:44px;height:44px;border-radius:12px;background:var(--gtv-grad);color:#FFF;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 10px 20px -8px rgba(46,123,196,.8)}
+.f5d-gtv-page .gtv-dash-head>div{flex:1;min-width:0}
+.f5d-gtv-page .gtv-dash-label{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gtv-d-muted);font-weight:600;margin-bottom:2px!important}
+.f5d-gtv-page .gtv-dash-title{font-size:19px;font-weight:700;color:#FFF;line-height:1.25}
+.f5d-gtv-page .gtv-pulse{width:6px;height:6px;border-radius:50%;background:#8BC5EE;box-shadow:0 0 0 3px rgba(139,197,238,.2)}
+.f5d-gtv-page .gtv-dash-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.f5d-gtv-page .gtv-dash-meta>div{padding:10px 12px;border-radius:12px;background:rgba(11,18,32,.4);border:1px solid rgba(255,255,255,.07);min-width:0}
+.f5d-gtv-page .gtv-dash-meta span{display:block;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gtv-d-muted);font-weight:600;margin-bottom:3px}
+.f5d-gtv-page .gtv-dash-meta strong{display:block;font-size:12.5px;font-weight:600;color:#E5EDF6;line-height:1.35}
+.f5d-gtv-page .gtv-dash-list{border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(11,18,32,.25);padding:4px 14px}
+.f5d-gtv-page .gtv-dash-list li{display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.09);font-size:13.5px;line-height:1.4;color:#E5EDF6}
+.f5d-gtv-page .gtv-dash-list li:last-child{border-bottom:0}
+.f5d-gtv-page .gtv-dash-ic{width:30px;height:30px;border-radius:9px;background:rgba(90,176,227,.12);border:1px solid rgba(90,176,227,.22);color:#8BC5EE;display:inline-flex;align-items:center;justify-content:center}
+.f5d-gtv-page .gtv-dash-ic svg.gtv-i{width:15px;height:15px}
+.f5d-gtv-page .gtv-dash-ok{width:22px;height:22px;border-radius:50%;background:var(--gtv-grad);color:#FFF;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 4px 10px -3px rgba(46,123,196,.8)}
+.f5d-gtv-page .gtv-dash-ok svg.gtv-i{width:12px;height:12px;stroke-width:2.6}
+.f5d-gtv-page .gtv-dash-foot{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;margin-top:16px;padding:14px 16px;border-radius:14px;background:rgba(11,18,32,.55);border:1px solid rgba(255,255,255,.08)}
+.f5d-gtv-page .gtv-matrix{display:grid;grid-template-columns:repeat(6,9px);gap:4px}
+.f5d-gtv-page .gtv-matrix i{width:9px;height:9px;border-radius:2.5px;background:rgba(255,255,255,.1)}
+.f5d-gtv-page .gtv-matrix i.d{background:#5AB0E3}
+.f5d-gtv-page .gtv-matrix i.a{background:rgba(90,176,227,.38)}
+.f5d-gtv-page .gtv-dash-foot p{font-size:12px;line-height:1.55;color:var(--gtv-d-body)}
+.f5d-gtv-page .gtv-dash-foot strong{color:#FFF;font-weight:600}
+.f5d-gtv-page .gtv-outs{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+.f5d-gtv-page .gtv-outs span{font-size:10.5px;font-weight:600;color:#CFE6F8;padding:3px 9px;border-radius:999px;border:1px solid rgba(139,197,238,.3);background:rgba(90,176,227,.08);white-space:nowrap}
+.f5d-gtv-page .gtv-dash-wrap .gtv-dash-body{padding-bottom:46px}
+.f5d-gtv-page .gtv-dash-float{position:absolute;z-index:2;right:28px;bottom:-22px;display:flex;align-items:center;gap:10px;padding:10px 14px 10px 10px;border-radius:14px;background:#FFF;color:var(--gtv-ink);box-shadow:0 24px 40px -18px rgba(0,0,0,.55);font-size:12px;line-height:1.35}
+.f5d-gtv-page .gtv-dash-float strong{display:block;font-size:12.5px;font-weight:700;color:var(--gtv-ink)}
+.f5d-gtv-page .gtv-dash-float span span{display:block;color:var(--gtv-muted)}
+.f5d-gtv-page .gtv-dash-float .gtv-dash-ic{background:var(--gtv-sky);border-color:#E3EDF7;color:var(--gtv-blue)}
+
+/* intro */
+.f5d-gtv-page .gtv-intro{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-bottom:64px}
+.f5d-gtv-page .gtv-intro .gtv-h2{margin-bottom:0}
+.f5d-gtv-page .gtv-intro-copy .gtv-lead+.gtv-lead{margin-top:16px}
+.f5d-gtv-page .gtv-intro-copy .gtv-strong{color:var(--gtv-ink);font-weight:600}
+.f5d-gtv-page .gtv-card-kicker{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gtv-blue);margin-bottom:10px}
+
+/* who for */
+.f5d-gtv-page .gtv-split{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+.f5d-gtv-page .gtv-split .gtv-head{text-align:left;margin:0}
+.f5d-gtv-page .gtv-checklist{background:#FFF;border:1.5px solid var(--gtv-border);border-radius:24px;padding:12px 30px;box-shadow:0 30px 60px -40px rgba(46,123,196,.35)}
+.f5d-gtv-page .gtv-checklist li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--gtv-border-soft);font-size:15px;line-height:1.6;color:#1F2937}
+.f5d-gtv-page .gtv-checklist li:last-child{border-bottom:0}
+.f5d-gtv-page .gtv-tick{width:26px;height:26px;border-radius:50%;background:var(--gtv-grad);color:#FFF;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;box-shadow:0 6px 12px -4px #2E7BC466}
+.f5d-gtv-page .gtv-tick svg.gtv-i{width:14px;height:14px;stroke-width:2.4}
+.f5d-gtv-page .gtv-note{margin-top:28px;display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:16px;background:#FFF;border:1px solid #CFDEF0;border-left:4px solid var(--gtv-blue);font-size:14px;line-height:1.65;color:#1F2937}
+.f5d-gtv-page .gtv-note svg.gtv-i{color:var(--gtv-blue);margin-top:1px}
+.f5d-gtv-page .gtv-note strong{font-weight:600;color:var(--gtv-ink)}
+
+/* services */
+.f5d-gtv-page .gtv-services .gtv-card{display:flex;flex-direction:column;min-height:100%}
+.f5d-gtv-page .gtv-card-top{display:flex;align-items:flex-start;justify-content:space-between}
+.f5d-gtv-page .gtv-card-idx{font-size:12px;font-weight:700;color:#A9BCD1;letter-spacing:.06em}
+.f5d-gtv-page .gtv-cta-card{background:linear-gradient(145deg,#0B1220 0%,#132544 100%);border:1px solid #1E3355;border-radius:20px;padding:28px;color:#FFF;display:flex;flex-direction:column;justify-content:space-between;gap:24px;position:relative;overflow:hidden}
+.f5d-gtv-page .gtv-cta-card h3{font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;color:#FFF}
+.f5d-gtv-page .gtv-cta-card p{font-size:14.5px;line-height:1.65;color:var(--gtv-d-body)}
+.f5d-gtv-page .gtv-cta-card .gtv-btn{align-self:flex-start;padding:13px 22px;font-size:14px}
+
+/* process timeline */
+.f5d-gtv-page .gtv-timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;position:relative;counter-reset:none}
+.f5d-gtv-page .gtv-timeline::before{content:'';position:absolute;top:27px;left:28px;right:calc((100% - 100px)/6 - 28px);height:2px;background:linear-gradient(90deg,rgba(90,176,227,.65),rgba(46,123,196,.45) 70%,rgba(139,197,238,.25))}
+.f5d-gtv-page .gtv-step{position:relative;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.f5d-gtv-page .gtv-step-num{width:56px;height:56px;border-radius:16px;background:var(--gtv-grad);color:#FFF;font-weight:800;font-size:16px;display:inline-flex;align-items:center;justify-content:center;position:relative;z-index:1;box-shadow:0 0 0 6px #0F1B2E,0 12px 24px -8px rgba(46,123,196,.7);margin-bottom:22px;transition:transform .3s var(--gtv-ease)}
+.f5d-gtv-page .gtv-step:last-child .gtv-step-num{background:#0F1B2E;color:#8BC5EE;border:1.5px dashed rgba(139,197,238,.6)}
+.f5d-gtv-page .gtv-step-body{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);border-radius:18px;padding:22px 20px;flex:1;width:100%;transition:border-color .3s ease,background .3s ease,transform .3s var(--gtv-ease)}
+.f5d-gtv-page .gtv-step:hover .gtv-step-body{border-color:rgba(139,197,238,.45);background:rgba(255,255,255,.07);transform:translateY(-3px)}
+.f5d-gtv-page .gtv-step:hover .gtv-step-num{transform:translateY(-3px)}
+.f5d-gtv-page .gtv-step-phase{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#78BEEB;margin-bottom:8px}
+.f5d-gtv-page .gtv-step h3{font-size:16px;font-weight:700;line-height:1.3;color:#FFF;margin-bottom:10px}
+.f5d-gtv-page .gtv-step p{font-size:13.5px;line-height:1.6;color:var(--gtv-d-body)}
+.f5d-gtv-page .gtv-step-handoff{display:inline-flex;margin-top:12px;font-size:10.5px;font-weight:600;letter-spacing:.04em;color:#CFE6F8;padding:4px 10px;border-radius:999px;border:1px solid rgba(139,197,238,.35)}
+.f5d-gtv-page .gtv-commit{margin:56px auto 0;max-width:820px;display:flex;gap:16px;align-items:center;justify-content:center;text-align:left;padding:20px 26px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(11,18,32,.45);font-size:14.5px;line-height:1.65;color:var(--gtv-d-body)}
+.f5d-gtv-page .gtv-commit svg.gtv-i{color:#8BC5EE}
+
+/* do / don't */
+.f5d-gtv-page .gtv-compare{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.f5d-gtv-page .gtv-compare .gtv-card{padding:36px}
+.f5d-gtv-page .gtv-compare .gtv-card:hover{transform:none}
+.f5d-gtv-page .gtv-compare-head{display:flex;align-items:center;gap:14px;padding-bottom:22px;margin-bottom:8px;border-bottom:1px solid var(--gtv-border-soft)}
+.f5d-gtv-page .gtv-compare-head h3{margin:0;font-size:21px}
+.f5d-gtv-page .gtv-compare-badge{width:44px;height:44px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center}
+.f5d-gtv-page .gtv-do .gtv-compare-badge{background:var(--gtv-grad);color:#FFF;box-shadow:0 8px 16px -6px #2E7BC488}
+.f5d-gtv-page .gtv-dont{background:#FBFCFE}
+.f5d-gtv-page .gtv-dont .gtv-compare-badge{background:#F1F4F8;color:#64748B;border:1px solid #E2E8F0}
+.f5d-gtv-page .gtv-compare li{display:flex;gap:14px;align-items:flex-start;padding:13px 0;font-size:15px;line-height:1.55;color:#1F2937}
+.f5d-gtv-page .gtv-mark{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.f5d-gtv-page .gtv-mark svg.gtv-i{width:13px;height:13px;stroke-width:2.4}
+.f5d-gtv-page .gtv-mark-yes{background:#E6F1FB;color:var(--gtv-blue)}
+.f5d-gtv-page .gtv-mark-no{background:#F1F4F8;color:#7B8794}
+.f5d-gtv-page .gtv-dont li{color:#475569}
+.f5d-gtv-page .gtv-statement{max-width:860px;margin:40px auto 0;text-align:center;font-size:16px;line-height:1.75;color:var(--gtv-body)}
+.f5d-gtv-page .gtv-statement strong{color:var(--gtv-ink);font-weight:600}
+
+/* assessment deliverable */
+.f5d-gtv-page .gtv-assess{display:grid;grid-template-columns:1.45fr 1fr;gap:28px;align-items:start}
+.f5d-gtv-page .gtv-doc{background:#FFF;border:1.5px solid var(--gtv-border);border-radius:24px;overflow:hidden;box-shadow:0 40px 80px -50px rgba(11,18,32,.35)}
+.f5d-gtv-page .gtv-doc-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 26px;background:var(--gtv-sky);border-bottom:1px solid var(--gtv-border-soft)}
+.f5d-gtv-page .gtv-doc-bar-title{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:600;color:var(--gtv-ink)}
+.f5d-gtv-page .gtv-doc-bar-title svg.gtv-i{color:var(--gtv-blue)}
+.f5d-gtv-page .gtv-doc-bar .gtv-tag{background:#FFF;color:var(--gtv-blue);border:1px solid #CFDEF0}
+.f5d-gtv-page .gtv-doc-grid{display:grid;grid-template-columns:1fr 1fr}
+.f5d-gtv-page .gtv-doc-item{display:grid;grid-template-columns:38px 1fr;gap:14px;padding:22px 26px;border-bottom:1px solid var(--gtv-border-soft);transition:background .25s ease}
+.f5d-gtv-page .gtv-doc-item:nth-child(odd){border-right:1px solid var(--gtv-border-soft)}
+.f5d-gtv-page .gtv-doc-item:nth-last-child(-n+2){border-bottom:0}
+.f5d-gtv-page .gtv-doc-item:hover{background:#FAFCFF}
+.f5d-gtv-page .gtv-doc-num{width:38px;height:38px;border-radius:10px;background:var(--gtv-sky);border:1px solid #E3EDF7;color:var(--gtv-blue);font-size:12.5px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;transition:background .25s ease,color .25s ease}
+.f5d-gtv-page .gtv-doc-item:hover .gtv-doc-num{background:var(--gtv-grad);color:#FFF;border-color:transparent}
+.f5d-gtv-page .gtv-doc-item h3{font-size:15.5px;font-weight:700;line-height:1.35;color:var(--gtv-ink);margin-bottom:5px}
+.f5d-gtv-page .gtv-doc-item p{font-size:13.5px;line-height:1.6;color:var(--gtv-muted)}
+.f5d-gtv-page .gtv-aside{display:flex;flex-direction:column;gap:20px;position:sticky;top:100px}
+.f5d-gtv-page .gtv-aside .gtv-card:hover{transform:none}
+.f5d-gtv-page .gtv-aside h3{font-size:17px}
+.f5d-gtv-page .gtv-aside-intro{font-size:14px;line-height:1.65;color:var(--gtv-muted);margin-bottom:18px}
+.f5d-gtv-page .gtv-outcomes li{display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:start;padding:14px 0;border-top:1px solid var(--gtv-border-soft)}
+.f5d-gtv-page .gtv-outcome-ic{width:36px;height:36px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center}
+.f5d-gtv-page .gtv-outcome-ic svg.gtv-i{width:18px;height:18px}
+.f5d-gtv-page .gtv-o1 .gtv-outcome-ic{background:#E6F1FB;color:var(--gtv-blue)}
+.f5d-gtv-page .gtv-o2 .gtv-outcome-ic{background:#EEF2F6;color:#475569}
+.f5d-gtv-page .gtv-o3 .gtv-outcome-ic{background:#FFF4EA;color:#C2570C}
+.f5d-gtv-page .gtv-outcomes strong{display:block;font-size:14.5px;font-weight:600;color:var(--gtv-ink);margin-bottom:3px}
+.f5d-gtv-page .gtv-outcomes div>span{display:block;font-size:13.5px;line-height:1.6;color:var(--gtv-muted)}
+.f5d-gtv-page .gtv-aside-cta{width:100%;margin-top:8px}
+.f5d-gtv-page .gtv-honest{background:linear-gradient(145deg,#0B1220 0%,#132544 100%);border-radius:20px;padding:26px;color:#FFF;border:1px solid #1E3355}
+.f5d-gtv-page .gtv-honest .gtv-card-kicker{color:#8BC5EE}
+.f5d-gtv-page .gtv-honest p{font-size:14px;line-height:1.7;color:var(--gtv-d-body)}
+.f5d-gtv-page .gtv-honest p strong{color:#FFF;font-weight:600}
+.f5d-gtv-page .gtv-principles{margin-top:16px;display:flex;flex-direction:column;gap:9px}
+.f5d-gtv-page .gtv-principles li{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.55;color:#DCE6F2}
+.f5d-gtv-page .gtv-principles svg.gtv-i{width:16px;height:16px;color:#8BC5EE;margin-top:2px}
+.f5d-gtv-page .gtv-fineprint{margin-top:28px;display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.65;color:var(--gtv-muted);max-width:900px}
+.f5d-gtv-page .gtv-fineprint svg.gtv-i{width:18px;height:18px;color:#94A3B8;margin-top:1px}
+
+/* journey */
+.f5d-gtv-page .gtv-journey{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative}
+.f5d-gtv-page .gtv-stage{background:#FFF;border:1.5px solid var(--gtv-border);border-radius:22px;padding:28px;position:relative}
+.f5d-gtv-page .gtv-stage:not(:last-child)::after{content:'';position:absolute;top:50%;right:-17px;width:12px;height:12px;border-top:2px solid #8BB8E0;border-right:2px solid #8BB8E0;transform:translateY(-50%) rotate(45deg);z-index:1}
+.f5d-gtv-page .gtv-stage-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.f5d-gtv-page .gtv-stage-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gtv-blue)}
+.f5d-gtv-page .gtv-stage h3{font-size:21px;font-weight:700;line-height:1.25;color:var(--gtv-ink);margin-bottom:18px}
+.f5d-gtv-page .gtv-progress{height:4px;border-radius:999px;background:#E3EDF7;margin-bottom:20px;overflow:hidden}
+.f5d-gtv-page .gtv-progress i{display:block;height:100%;width:var(--w);background:var(--gtv-grad);border-radius:999px}
+.f5d-gtv-page .gtv-stage li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;padding:12px 0;border-top:1px solid var(--gtv-border-soft);font-size:14.5px;line-height:1.55;color:#1F2937}
+.f5d-gtv-page .gtv-stage-n{width:30px;height:30px;border-radius:50%;background:var(--gtv-sky);border:1px solid #CFDEF0;color:var(--gtv-blue);font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
+.f5d-gtv-page .gtv-stage-last{background:linear-gradient(160deg,#FFFFFF 0%,#F2F8FE 100%);border-color:#BFD6EE}
+.f5d-gtv-page .gtv-journey-note{text-align:center;margin-top:32px;font-size:13.5px;color:var(--gtv-muted)}
+
+/* testimonials (ILLUSTRATIVE placeholders — see the HTML comment on the section) */
+.f5d-gtv-page .gtv-illus-note{max-width:820px;margin:-24px auto 44px;display:flex;gap:14px;align-items:flex-start;padding:16px 20px;border-radius:16px;border:1px dashed rgba(139,197,238,.45);background:rgba(90,176,227,.07);font-size:13.5px;line-height:1.65;color:var(--gtv-d-body)}
+.f5d-gtv-page .gtv-illus-note svg.gtv-i{width:18px;height:18px;color:#8BC5EE;margin-top:2px}
+.f5d-gtv-page .gtv-illus-note strong{color:#FFF;font-weight:600}
+.f5d-gtv-page .gtv-tgrid{align-items:stretch}
+.f5d-gtv-page .gtv-tcard{margin:0;display:flex;flex-direction:column;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px;transition:transform .3s var(--gtv-ease),border-color .3s ease,background .3s ease,box-shadow .3s var(--gtv-ease)}
+.f5d-gtv-page .gtv-tcard:hover{transform:translateY(-4px);border-color:rgba(139,197,238,.45);background:rgba(255,255,255,.07);box-shadow:0 30px 50px -30px rgba(0,0,0,.6)}
+.f5d-gtv-page .gtv-tcard-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.f5d-gtv-page .gtv-qmark{font-family:Georgia,'Times New Roman',serif;font-size:54px;line-height:.6;height:26px;background:var(--gtv-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.f5d-gtv-page .gtv-illus-tag{background:rgba(255,255,255,.06);color:#CFD8E3;border:1px dashed rgba(255,255,255,.28);font-size:9.5px;padding:4px 9px}
+.f5d-gtv-page .gtv-tcard blockquote{margin:0;padding:0;border:0;flex:1}
+.f5d-gtv-page .gtv-tcard blockquote p{font-size:15px;line-height:1.75;color:#DCE6F2;font-style:normal}
+.f5d-gtv-page .gtv-tfocus{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 0!important}
+.f5d-gtv-page .gtv-tfocus span{font-size:10.5px;font-weight:600;letter-spacing:.03em;color:#8BC5EE;padding:3px 10px;border-radius:999px;background:rgba(90,176,227,.1);border:1px solid rgba(90,176,227,.22)}
+.f5d-gtv-page .gtv-tperson{font-style:normal;text-align:left;display:flex;align-items:center;gap:14px;margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+/* avatar: 52x52 everywhere. To use an approved photo later, put <img class="gtv-avatar-img" src="..." alt=""> inside .gtv-avatar */
+.f5d-gtv-page .gtv-avatar{width:52px;height:52px;border-radius:50%;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;letter-spacing:.02em;color:#FFF;position:relative;overflow:hidden;box-shadow:0 0 0 3px rgba(255,255,255,.08),0 10px 20px -10px rgba(0,0,0,.6);transition:transform .3s var(--gtv-ease)}
+.f5d-gtv-page .gtv-avatar::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.35),transparent 55%)}
+.f5d-gtv-page .gtv-avatar .gtv-avatar-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.f5d-gtv-page .gtv-tcard:hover .gtv-avatar{transform:scale(1.06)}
+.f5d-gtv-page .gtv-av1{background:linear-gradient(135deg,#5AB0E3,#2E7BC4)}
+.f5d-gtv-page .gtv-av2{background:linear-gradient(135deg,#3B82C4,#1B3B67)}
+.f5d-gtv-page .gtv-av3{background:linear-gradient(135deg,#8BC5EE,#4696D7)}
+.f5d-gtv-page .gtv-av4{background:linear-gradient(135deg,#2E7BC4,#0F1B2E)}
+.f5d-gtv-page .gtv-av5{background:linear-gradient(135deg,#78BEEB,#2B5C94)}
+.f5d-gtv-page .gtv-av6{background:linear-gradient(135deg,#4F8FD0,#132544)}
+.f5d-gtv-page .gtv-tperson strong{display:block;font-size:15px;font-weight:600;color:#FFF;line-height:1.3}
+.f5d-gtv-page .gtv-tperson span span{display:block;font-size:13px;color:var(--gtv-d-muted);line-height:1.4;margin-top:2px}
+
+/* sticky "Book Free Consultation" CTA — lives OUTSIDE .f5d-gtv-page (docked into the site header by the script) */
+.gtv-hcta{min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;background:linear-gradient(135deg,#5AB0E3 0%,#2E7BC4 100%);color:#FFF!important;font-family:'Poppins',system-ui,sans-serif;font-size:14px;font-weight:600;line-height:1.2;text-decoration:none!important;white-space:nowrap;box-shadow:0 6px 18px -6px rgba(46,123,196,.5);transition:transform .18s ease,box-shadow .18s ease,opacity .25s ease;position:relative;overflow:hidden;flex-shrink:0}
+.gtv-hcta::after{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s ease}
+.gtv-hcta:hover{transform:translateY(-2px);box-shadow:0 12px 26px -6px rgba(46,123,196,.65);color:#FFF!important}
+.gtv-hcta:hover::after{left:130%}
+.gtv-hcta:focus-visible{outline:2px solid #2E7BC4;outline-offset:3px}
+.gtv-hcta-arrow{display:inline-block;transition:transform .25s ease}
+.gtv-hcta:hover .gtv-hcta-arrow{transform:translateX(3px)}
+.gtv-hcta-short,.gtv-hcta-stack{display:none}
+/* docked: positioned inside the sticky header by the script; size steps down when space is tight */
+.gtv-hcta.gtv-hcta-docked{position:absolute;margin:0;z-index:5;visibility:hidden}
+.gtv-hcta.gtv-hcta-docked.gtv-hm-ready{visibility:visible}
+.gtv-hcta.gtv-hm-short{padding:0 16px;min-height:40px;font-size:12.5px;gap:6px}
+.gtv-hcta.gtv-hm-short .gtv-hcta-long,.gtv-hcta.gtv-hm-stack .gtv-hcta-long{display:none}
+.gtv-hcta.gtv-hm-short .gtv-hcta-short{display:inline}
+.gtv-hcta.gtv-hm-stack{padding:5px 14px;min-height:40px;font-size:11px;line-height:1.15;border-radius:14px;text-align:center}
+.gtv-hcta.gtv-hm-stack .gtv-hcta-stack{display:inline}
+.gtv-hcta.gtv-hm-short .gtv-hcta-arrow,.gtv-hcta.gtv-hm-stack .gtv-hcta-arrow{display:none}
+.gtv-hcta.gtv-hcta-float{position:fixed;z-index:40;top:16px;right:20px;opacity:0;transform:translateY(-8px);pointer-events:none;box-shadow:0 14px 30px -10px rgba(11,18,32,.45)}
+.gtv-hcta.gtv-hcta-float.gtv-hcta-on{opacity:1;transform:none;pointer-events:auto}
+.gtv-hcta.gtv-hcta-inflow{position:relative}
+.gtv-hcta.gtv-hcta-float.gtv-hm-short{top:auto;bottom:20px;right:auto;left:20px} /* bottom-left: the site's back-to-top button is bottom-right */
+@media (max-width:480px){
+  .gtv-hcta.gtv-hcta-float{top:auto;bottom:14px;right:14px;padding:0 18px;min-height:44px;font-size:13px}
+  .gtv-hcta.gtv-hcta-float .gtv-hcta-long{display:none}
+  .gtv-hcta.gtv-hcta-float .gtv-hcta-short{display:inline}
+}
+@media (prefers-reduced-motion:reduce){ .gtv-hcta,.gtv-hcta::after,.gtv-hcta-arrow{transition:none!important} }
+
+/* faq */
+.f5d-gtv-page .gtv-faq-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.f5d-gtv-page .gtv-faq-layout .gtv-head{text-align:left;margin:0;position:sticky;top:110px}
+.f5d-gtv-page .gtv-faq-list{display:flex;flex-direction:column;gap:12px}
+.f5d-gtv-page .gtv-faq{background:#FFF;border:1.5px solid var(--gtv-border-soft);border-radius:16px;transition:border-color .25s ease,box-shadow .25s ease}
+.f5d-gtv-page .gtv-faq:hover{border-color:#CFDEF0}
+.f5d-gtv-page .gtv-faq[open]{border-color:#BFD6EE;box-shadow:0 20px 40px -26px rgba(46,123,196,.3)}
+.f5d-gtv-page .gtv-faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;font-size:16px;font-weight:600;line-height:1.45;color:var(--gtv-ink);border-radius:16px}
+.f5d-gtv-page .gtv-faq summary::-webkit-details-marker{display:none}
+.f5d-gtv-page .gtv-faq summary::marker{content:''}
+.f5d-gtv-page .gtv-faq-q{font:inherit;color:inherit;margin:0;letter-spacing:inherit}
+.f5d-gtv-page .gtv-faq-icon{width:32px;height:32px;border-radius:50%;background:var(--gtv-sky);border:1px solid #DCE9F5;color:var(--gtv-blue);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s var(--gtv-ease),background .25s ease,color .25s ease}
+.f5d-gtv-page .gtv-faq-icon svg.gtv-i{width:15px;height:15px;stroke-width:2.2}
+.f5d-gtv-page .gtv-faq[open] .gtv-faq-icon{transform:rotate(45deg);background:var(--gtv-grad);color:#FFF;border-color:transparent}
+.f5d-gtv-page .gtv-faq-a{padding:0 24px 22px;font-size:15px;line-height:1.75;color:var(--gtv-body);max-width:720px}
+.f5d-gtv-page .gtv-faq[open] .gtv-faq-a{animation:gtvFade .35s var(--gtv-ease)}
+@keyframes gtvFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+/* final cta */
+.f5d-gtv-page .gtv-final .gtv-wrap{text-align:center;padding:120px 40px}
+.f5d-gtv-page .gtv-final .gtv-h2{font-size:clamp(30px,4.4vw,50px);max-width:900px;margin:0 auto 20px}
+.f5d-gtv-page .gtv-final .gtv-lead{max-width:640px;margin:0 auto 38px;font-size:17px}
+.f5d-gtv-page .gtv-final .gtv-ctas{justify-content:center}
+
+/* disclaimer */
+.f5d-gtv-page .gtv-disclaimer{background:#F5F8FB;border-top:1px solid var(--gtv-border-soft)}
+.f5d-gtv-page .gtv-disclaimer .gtv-wrap{padding:36px 40px}
+.f5d-gtv-page .gtv-disclaimer-inner{display:flex;gap:14px;align-items:flex-start;max-width:1100px;margin:0 auto}
+.f5d-gtv-page .gtv-disclaimer-inner svg.gtv-i{width:18px;height:18px;color:#94A3B8;margin-top:2px}
+.f5d-gtv-page .gtv-disclaimer h2{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#64748B;margin-bottom:6px}
+.f5d-gtv-page .gtv-disclaimer p{font-size:12.5px;line-height:1.75;color:#64748B}
+
+/* reveal */
+.f5d-gtv-page.gtv-js .gtv-reveal:not(.gtv-done){opacity:0;transform:translateY(24px);transition:opacity .8s var(--gtv-ease),transform .8s var(--gtv-ease)}
+.f5d-gtv-page.gtv-js .gtv-reveal.gtv-in:not(.gtv-done){opacity:1;transform:none}
+.f5d-gtv-page.gtv-js .gtv-stagger:not(.gtv-done)>*{opacity:0;transform:translateY(18px);transition:opacity .7s var(--gtv-ease),transform .7s var(--gtv-ease)}
+.f5d-gtv-page.gtv-js .gtv-stagger.gtv-in:not(.gtv-done)>*{opacity:1;transform:none}
+.f5d-gtv-page.gtv-js .gtv-stagger.gtv-in:not(.gtv-done)>*:nth-child(2){transition-delay:.06s}
+.f5d-gtv-page.gtv-js .gtv-stagger.gtv-in:not(.gtv-done)>*:nth-child(3){transition-delay:.12s}
+.f5d-gtv-page.gtv-js .gtv-stagger.gtv-in:not(.gtv-done)>*:nth-child(4){transition-delay:.18s}
+.f5d-gtv-page.gtv-js .gtv-stagger.gtv-in:not(.gtv-done)>*:nth-child(5){transition-delay:.24s}
+.f5d-gtv-page.gtv-js .gtv-stagger.gtv-in:not(.gtv-done)>*:nth-child(6){transition-delay:.3s}
+.f5d-gtv-page.gtv-js .gtv-stagger.gtv-in:not(.gtv-done)>*:nth-child(n+7){transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){
+  .f5d-gtv-page *,.f5d-gtv-page *::before,.f5d-gtv-page *::after{transition:none!important;animation:none!important}
+  .f5d-gtv-page.gtv-js .gtv-reveal,.f5d-gtv-page.gtv-js .gtv-stagger:not(.gtv-done)>*{opacity:1;transform:none}
+}
+
+/* responsive */
+@media (max-width:1180px){
+  .f5d-gtv-page .gtv-timeline{grid-template-columns:1fr;gap:0;max-width:720px;margin:0 auto}
+  .f5d-gtv-page .gtv-timeline::before{display:none}
+  .f5d-gtv-page .gtv-step:not(:last-child)::after{content:'';position:absolute;left:27px;top:56px;bottom:0;width:2px;background:linear-gradient(180deg,rgba(90,176,227,.65),rgba(46,123,196,.35))}
+  .f5d-gtv-page .gtv-step{flex-direction:row;align-items:flex-start;text-align:left;gap:22px;padding-bottom:18px}
+  .f5d-gtv-page .gtv-step:last-child{padding-bottom:0}
+  .f5d-gtv-page .gtv-step-num{margin-bottom:0;flex-shrink:0}
+  .f5d-gtv-page .gtv-step-body{padding:20px 22px}
+  .f5d-gtv-page .gtv-step h3{font-size:17px}
+  .f5d-gtv-page .gtv-step p{font-size:14px}
+}
+@media (max-width:1024px){
+  .f5d-gtv-page .gtv-wrap{padding:88px 32px}
+  .f5d-gtv-page .gtv-hero .gtv-wrap{grid-template-columns:1fr;gap:48px;padding:72px 32px 88px}
+  .f5d-gtv-page .gtv-dash-wrap{justify-self:start;max-width:620px}
+  .f5d-gtv-page .gtv-dash-float{display:none}
+  .f5d-gtv-page .gtv-dash-wrap .gtv-dash-body{padding-bottom:22px}
+  .f5d-gtv-page .gtv-grid-3{grid-template-columns:repeat(2,1fr)}
+  .f5d-gtv-page .gtv-intro,.f5d-gtv-page .gtv-split,.f5d-gtv-page .gtv-faq-layout{grid-template-columns:1fr;gap:36px}
+  .f5d-gtv-page .gtv-faq-layout .gtv-head{position:static}
+  .f5d-gtv-page .gtv-assess{grid-template-columns:1fr}
+  .f5d-gtv-page .gtv-aside{position:static;display:grid;grid-template-columns:1fr 1fr}
+  .f5d-gtv-page .gtv-journey{grid-template-columns:1fr;max-width:640px;margin:0 auto}
+  .f5d-gtv-page .gtv-stage:not(:last-child)::after{top:auto;bottom:-17px;right:50%;transform:translateX(50%) rotate(135deg)}
+}
+@media (max-width:767px){
+  .f5d-gtv-page .gtv-wrap{padding:64px 16px}
+  .f5d-gtv-page .gtv-hero .gtv-wrap{padding:52px 16px 64px;gap:40px}
+  .f5d-gtv-page .gtv-hero-eyebrow{font-size:10px;letter-spacing:.1em;padding:6px 12px;gap:8px}
+  .f5d-gtv-page .gtv-h1{font-size:clamp(30px,8.4vw,40px)}
+  .f5d-gtv-page .gtv-hero-text{font-size:15.5px}
+  .f5d-gtv-page .gtv-h2{font-size:clamp(27px,7.4vw,34px)}
+  .f5d-gtv-page .gtv-head{margin-bottom:36px}
+  .f5d-gtv-page .gtv-ctas{flex-direction:column;align-items:stretch}
+  .f5d-gtv-page .gtv-ctas .gtv-btn{width:100%}
+  .f5d-gtv-page .gtv-dash{border-radius:18px}
+  .f5d-gtv-page .gtv-dash-chrome{padding:10px 14px}
+  .f5d-gtv-page .gtv-dash-wrap .gtv-dash-body{padding:18px 16px 16px}
+  .f5d-gtv-page .gtv-dash-title{font-size:17px}
+  .f5d-gtv-page .gtv-dash-badge{width:40px;height:40px}
+  .f5d-gtv-page .gtv-dash-head .gtv-tag{display:none}
+  .f5d-gtv-page .gtv-dash-meta{gap:6px}
+  .f5d-gtv-page .gtv-dash-meta>div{padding:9px 10px}
+  .f5d-gtv-page .gtv-dash-meta strong{font-size:11.5px}
+  .f5d-gtv-page .gtv-dash-list{padding:2px 12px}
+  .f5d-gtv-page .gtv-dash-list li{grid-template-columns:28px 1fr auto;gap:10px;font-size:13px}
+  .f5d-gtv-page .gtv-dash-ic{width:28px;height:28px}
+  .f5d-gtv-page .gtv-dash-foot{grid-template-columns:1fr;gap:12px;padding:14px}
+  .f5d-gtv-page .gtv-illus-note{margin:-12px 0 32px;padding:14px 16px;font-size:13px}
+  .f5d-gtv-page .gtv-tcard{padding:24px}
+  .f5d-gtv-page .gtv-tcard blockquote p{font-size:14.5px}
+  .f5d-gtv-page .gtv-grid-3,.f5d-gtv-page .gtv-compare,.f5d-gtv-page .gtv-doc-grid,.f5d-gtv-page .gtv-aside{grid-template-columns:1fr}
+  .f5d-gtv-page .gtv-card,.f5d-gtv-page .gtv-dcard{padding:24px}
+  .f5d-gtv-page .gtv-compare .gtv-card{padding:26px 22px}
+  .f5d-gtv-page .gtv-checklist{padding:6px 20px}
+  .f5d-gtv-page .gtv-doc-item{padding:20px;border-right:0!important;border-bottom:1px solid var(--gtv-border-soft)!important}
+  .f5d-gtv-page .gtv-doc-item:last-child{border-bottom:0!important}
+  .f5d-gtv-page .gtv-doc-bar{padding:16px 20px}
+  .f5d-gtv-page .gtv-step{gap:16px}
+  .f5d-gtv-page .gtv-step-num{width:48px;height:48px;border-radius:14px;font-size:14px}
+  .f5d-gtv-page .gtv-step:not(:last-child)::after{left:23px;top:48px}
+  .f5d-gtv-page .gtv-commit{flex-direction:column;align-items:flex-start;padding:18px 20px;margin-top:40px}
+  .f5d-gtv-page .gtv-intro{margin-bottom:40px}
+  .f5d-gtv-page .gtv-stage{padding:24px 20px}
+  .f5d-gtv-page .gtv-faq summary{padding:18px 18px;font-size:15px}
+  .f5d-gtv-page .gtv-faq-a{padding:0 18px 20px;font-size:14.5px}
+  .f5d-gtv-page .gtv-final .gtv-wrap{padding:80px 16px}
+  .f5d-gtv-page .gtv-disclaimer .gtv-wrap{padding:28px 16px}
+}
+</style>
+
+<!-- Line-icon sprite (decorative) -->
+<svg class="gtv-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="gtv-i-eyeoff" viewBox="0 0 24 24"><path d="M10.6 5.1A10.6 10.6 0 0 1 12 5c6 0 9.5 7 9.5 7a17 17 0 0 1-2.6 3.5M6.6 6.6C3.9 8.4 2.5 12 2.5 12S6 19 12 19a9.6 9.6 0 0 0 5.4-1.6"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/><path d="M3 3l18 18"/></symbol>
+  <symbol id="gtv-i-signal" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19A10 10 0 0 1 5 5"/></symbol>
+  <symbol id="gtv-i-filex" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M10 12.5l4 4M14 12.5l-4 4"/></symbol>
+  <symbol id="gtv-i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+  <symbol id="gtv-i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="gtv-i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="gtv-i-usersearch" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 21a7 7 0 0 1 9.5-6.5"/><circle cx="17" cy="17" r="3"/><path d="M21 21l-1.8-1.8"/></symbol>
+  <symbol id="gtv-i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19H16a3.5 3.5 0 0 0 0-7H8a3.5 3.5 0 0 1 0-7h7.5"/></symbol>
+  <symbol id="gtv-i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke-dasharray="2 2"/></symbol>
+  <symbol id="gtv-i-map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+  <symbol id="gtv-i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></symbol>
+  <symbol id="gtv-i-cube" viewBox="0 0 24 24"><path d="M12 2.5l8.5 4.75v9.5L12 21.5l-8.5-4.75v-9.5z"/><path d="M3.5 7.25L12 12l8.5-4.75M12 12v9.5"/></symbol>
+  <symbol id="gtv-i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2.5"/><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="7" r="2.5"/><path d="M6 7.5v9M18 9.5a6 6 0 0 1-6 6H8.3"/></symbol>
+  <symbol id="gtv-i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="gtv-i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="gtv-i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9L7 22l5-3 5 3-1.5-8.1"/></symbol>
+  <symbol id="gtv-i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 13.5l2 2 4-4"/></symbol>
+  <symbol id="gtv-i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="gtv-i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+  <symbol id="gtv-i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="gtv-i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+  <symbol id="gtv-i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="gtv-i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8.3-7.5 9.5-4.3-1.2-7.5-5-7.5-9.5V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="gtv-i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="gtv-i-pause" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/></symbol>
+  <symbol id="gtv-i-arrowr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<!-- ============ 1. HERO ============ -->
+<section class="gtv-dark gtv-hero" aria-labelledby="gtv-hero-title">
+  <div class="gtv-glow" style="top:-160px;right:-140px;width:540px;height:540px;background:radial-gradient(circle,rgba(90,176,227,.32),transparent 65%)"></div>
+  <div class="gtv-glow" style="bottom:-200px;left:-160px;width:500px;height:500px;background:radial-gradient(circle,rgba(46,123,196,.22),transparent 65%)"></div>
+  <div class="gtv-gridbg"></div>
+  <div class="gtv-wrap">
+    <div class="gtv-reveal">
+      <p class="gtv-hero-eyebrow"><span class="gtv-dot" aria-hidden="true"></span>Global Talent Visa <span class="gtv-sep" aria-hidden="true"></span> Digital Technology</p>
+      <h1 class="gtv-h1" id="gtv-hero-title">Build Your Global Technology Profile. <span class="gtv-h1-sub"><span class="gtv-grad-text">Prepare for the UK Global Talent Visa.</span></span></h1>
+      <p class="gtv-hero-text">A structured profile-development programme for ambitious technology professionals. We help identify your strengths, address evidence gaps, document your contributions and build a credible professional profile aligned with the UK Global Talent Visa – Digital Technology requirements.</p>
+      <div class="gtv-ctas">
+        <a class="gtv-btn gtv-btn-primary" href="/contact-us/" data-gtv-book>Book a Profile Assessment <span class="gtv-arrow" aria-hidden="true">→</span></a>
+        <a class="gtv-btn gtv-btn-ghost" href="#gtv-process" data-gtv-scroll>Explore the Programme <span class="gtv-arrow gtv-arrow-down" aria-hidden="true">↓</span></a>
+      </div>
+      <p class="gtv-hero-note"><svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-shield"/></svg>Profile development and evidence organisation, not immigration or legal advice.</p>
+    </div>
+
+    <div class="gtv-dash-wrap gtv-reveal">
+      <aside class="gtv-dash" aria-label="What your Profile Assessment covers">
+        <div class="gtv-dash-chrome" aria-hidden="true"><i></i><i></i><i></i><p class="gtv-dash-path">First500days · Profile Assessment</p></div>
+        <div class="gtv-dash-body">
+          <div class="gtv-dash-head">
+            <span class="gtv-dash-badge" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-doc"/></svg></span>
+            <div>
+              <p class="gtv-dash-label">Your first step</p>
+              <p class="gtv-dash-title">Profile Assessment</p>
+            </div>
+            <span class="gtv-tag gtv-tag-blue"><span class="gtv-pulse" aria-hidden="true"></span>Individual review</span>
+          </div>
+          <div class="gtv-dash-meta">
+            <div><span>Route</span><strong>Digital Technology</strong></div>
+            <div><span>Pathway</span><strong>Talent / Promise</strong></div>
+            <div><span>Evidence</span><strong>Status-labelled</strong></div>
+          </div>
+          <ul class="gtv-dash-list">
+            <li><span class="gtv-dash-ic" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-usersearch"/></svg></span>Professional profile review<span class="gtv-dash-ok" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span></li>
+            <li><span class="gtv-dash-ic" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-route"/></svg></span>Route relevance assessment<span class="gtv-dash-ok" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span></li>
+            <li><span class="gtv-dash-ic" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-grid"/></svg></span>Evidence gap analysis<span class="gtv-dash-ok" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span></li>
+            <li><span class="gtv-dash-ic" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-map"/></svg></span>Personalised roadmap<span class="gtv-dash-ok" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span></li>
+            <li><span class="gtv-dash-ic" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-branch"/></svg></span>Technical portfolio review<span class="gtv-dash-ok" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span></li>
+            <li><span class="gtv-dash-ic" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-award"/></svg></span>Recognition &amp; contribution planning<span class="gtv-dash-ok" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span></li>
+          </ul>
+          <div class="gtv-dash-foot">
+            <span class="gtv-matrix" aria-hidden="true"><i class="d"></i><i class="d"></i><i class="a"></i><i></i><i class="d"></i><i class="a"></i><i class="a"></i><i class="d"></i><i></i><i class="a"></i><i class="d"></i><i></i><i class="d"></i><i class="a"></i><i class="d"></i><i class="a"></i><i></i><i class="d"></i></span>
+            <div>
+              <p><strong>An honest recommendation</strong> based on what your evidence shows:</p>
+              <p class="gtv-outs"><span>Proceed</span><span>Develop further first</span><span>Seek regulated advice</span></p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="gtv-dash-float" aria-hidden="true">
+        <span class="gtv-dash-ic"><svg class="gtv-i"><use href="#gtv-i-shield"/></svg></span>
+        <span><strong>Evidence-first review</strong><span>Documented · Asserted · Missing</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. THE OPPORTUNITY ============ -->
+<section class="gtv-light" aria-labelledby="gtv-intro-title">
+  <div class="gtv-wrap">
+    <div class="gtv-intro gtv-reveal">
+      <div>
+        <p class="gtv-eyebrow">The opportunity</p>
+        <h2 class="gtv-h2" id="gtv-intro-title">Your Expertise Deserves to Be Recognised <span class="gtv-grad-text">Beyond Your Job Title.</span></h2>
+      </div>
+      <div class="gtv-intro-copy">
+        <p class="gtv-lead">Many talented technology professionals have years of experience, meaningful technical contributions and valuable industry knowledge. However, their achievements are often difficult to demonstrate through publicly accessible, structured and independently verifiable evidence.</p>
+        <p class="gtv-lead">The Global Talent Visa requires more than a strong CV. Candidates need to demonstrate their expertise, contributions, recognition and potential within the digital technology sector.</p>
+        <p class="gtv-lead"><span class="gtv-strong">First500days helps candidates understand where they stand and develop a structured approach to strengthening their professional profiles.</span></p>
+      </div>
+    </div>
+    <div class="gtv-grid-3 gtv-stagger">
+      <article class="gtv-card">
+        <span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-eyeoff"/></svg></span>
+        <h3>Hidden Achievements</h3>
+        <p>Significant contributions often remain undocumented or confined to internal company projects.</p>
+      </article>
+      <article class="gtv-card">
+        <span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-signal"/></svg></span>
+        <h3>Limited Industry Visibility</h3>
+        <p>Technical expertise may not be reflected through public contributions, publications, communities or professional recognition.</p>
+      </article>
+      <article class="gtv-card">
+        <span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-filex"/></svg></span>
+        <h3>Evidence Gaps</h3>
+        <p>Achievements may exist but lack proper documentation, attribution and supporting evidence.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. OUR APPROACH ============ -->
+<section class="gtv-dark" aria-labelledby="gtv-approach-title">
+  <div class="gtv-gridbg"></div>
+  <div class="gtv-glow" style="top:-120px;left:50%;width:620px;height:360px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(90,176,227,.18),transparent 70%)"></div>
+  <div class="gtv-wrap">
+    <div class="gtv-head gtv-reveal">
+      <p class="gtv-eyebrow">Our approach</p>
+      <h2 class="gtv-h2" id="gtv-approach-title">We Build Profiles. <span class="gtv-grad-text">Not Just Applications.</span></h2>
+      <p class="gtv-lead">Our approach focuses on identifying genuine achievements, strengthening professional capabilities and building an evidence-backed profile over time.</p>
+    </div>
+    <div class="gtv-grid-3 gtv-stagger">
+      <article class="gtv-dcard">
+        <span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-compass"/></svg></span>
+        <h3>Assessment Before Action</h3>
+        <p>Understand your existing profile, identify strengths and evaluate gaps before deciding the next steps.</p>
+      </article>
+      <article class="gtv-dcard">
+        <span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-layers"/></svg></span>
+        <h3>Evidence-Led Development</h3>
+        <p>Build genuine technical contributions, document individual impact and strengthen professional visibility.</p>
+      </article>
+      <article class="gtv-dcard">
+        <span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-user"/></svg></span>
+        <h3>Personalised Guidance</h3>
+        <p>Follow a roadmap based on your background, experience, professional goals and current evidence.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. WHO IS THIS FOR ============ -->
+<section class="gtv-sky" aria-labelledby="gtv-who-title">
+  <div class="gtv-wrap">
+    <div class="gtv-split">
+      <div class="gtv-head gtv-reveal">
+        <p class="gtv-eyebrow">Who it's for</p>
+        <h2 class="gtv-h2" id="gtv-who-title">Is the Global Talent Visa Programme <span class="gtv-grad-text">Right for You?</span></h2>
+        <p class="gtv-lead">Designed for technology professionals exploring the Exceptional Talent or Exceptional Promise pathways.</p>
+        <p class="gtv-note"><svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-info"/></svg><span><strong>Your job title, years of experience or employer alone do not establish eligibility.</strong> The relevance and quality of your evidence matter.</span></p>
+      </div>
+      <ul class="gtv-checklist gtv-stagger">
+        <li><span class="gtv-tick" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Professionals working in AI, Machine Learning, Data Science and Software Engineering.</li>
+        <li><span class="gtv-tick" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Individuals with meaningful experience building or contributing to technology products.</li>
+        <li><span class="gtv-tick" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Professionals who have led or significantly contributed to technical projects.</li>
+        <li><span class="gtv-tick" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Technology founders and product leaders with demonstrable digital technology expertise.</li>
+        <li><span class="gtv-tick" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Individuals with achievements that need better documentation and external visibility.</li>
+        <li><span class="gtv-tick" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Professionals who can identify senior industry experts familiar with their contributions.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. WHAT WE PROVIDE ============ -->
+<section class="gtv-white gtv-services" id="gtv-programme" aria-labelledby="gtv-programme-title">
+  <div class="gtv-wrap">
+    <div class="gtv-head gtv-reveal">
+      <p class="gtv-eyebrow">The programme</p>
+      <h2 class="gtv-h2" id="gtv-programme-title">A Structured Global Talent <span class="gtv-grad-text">Profile Development Programme.</span></h2>
+    </div>
+    <div class="gtv-grid-3 gtv-stagger">
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-usersearch"/></svg></span><span class="gtv-card-idx" aria-hidden="true">01</span></div><h3>Profile Assessment</h3><p>Detailed review of your professional background, experience and existing achievements.</p></article>
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-route"/></svg></span><span class="gtv-card-idx" aria-hidden="true">02</span></div><h3>Eligibility &amp; Route Assessment</h3><p>Preliminary assessment of the relevance of your profile to the Digital Technology route and potential Talent or Promise pathway.</p></article>
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-grid"/></svg></span><span class="gtv-card-idx" aria-hidden="true">03</span></div><h3>Evidence Gap Analysis</h3><p>Identification of missing, weak, undocumented or insufficiently attributable evidence.</p></article>
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-map"/></svg></span><span class="gtv-card-idx" aria-hidden="true">04</span></div><h3>Personalised Development Roadmap</h3><p>A structured 30/60/90/120-day roadmap based on your profile and development priorities.</p></article>
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-code"/></svg></span><span class="gtv-card-idx" aria-hidden="true">05</span></div><h3>Technical Skills Development</h3><p>Targeted technical learning and mentorship relevant to your professional domain.</p></article>
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-cube"/></svg></span><span class="gtv-card-idx" aria-hidden="true">06</span></div><h3>Real-World Project Development</h3><p>Guidance in developing meaningful technical work with clear individual contribution and documentation.</p></article>
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-branch"/></svg></span><span class="gtv-card-idx" aria-hidden="true">07</span></div><h3>GitHub &amp; Technical Portfolio</h3><p>Development of a structured, attributable and presentable technical portfolio.</p></article>
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-bulb"/></svg></span><span class="gtv-card-idx" aria-hidden="true">08</span></div><h3>Innovation &amp; Contribution Profile</h3><p>Documentation of innovations, significant contributions and professional impact.</p></article>
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-pen"/></svg></span><span class="gtv-card-idx" aria-hidden="true">09</span></div><h3>Thought Leadership Development</h3><p>Guidance on technical articles, case studies, knowledge sharing and professional visibility.</p></article>
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-award"/></svg></span><span class="gtv-card-idx" aria-hidden="true">10</span></div><h3>Recognition &amp; External Contribution Strategy</h3><p>Identification of relevant opportunities for professional contributions and recognition.</p></article>
+      <article class="gtv-card"><div class="gtv-card-top"><span class="gtv-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-folder"/></svg></span><span class="gtv-card-idx" aria-hidden="true">11</span></div><h3>Evidence Organisation &amp; Mentorship</h3><p>Evidence tracking, documentation, recommender-readiness planning and ongoing one-to-one guidance.</p></article>
+      <div class="gtv-cta-card">
+        <div>
+          <p class="gtv-card-kicker" style="color:#8BC5EE">Where it starts</p>
+          <h3>Every engagement begins with an assessment.</h3>
+          <p>Understand which of these services your profile actually needs, and which it doesn't.</p>
+        </div>
+        <a class="gtv-btn gtv-btn-primary" href="/contact-us/" data-gtv-book>Book a Profile Assessment <span class="gtv-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. HOW IT WORKS ============ -->
+<section class="gtv-dark" id="gtv-process" aria-labelledby="gtv-process-title">
+  <div class="gtv-gridbg"></div>
+  <div class="gtv-glow" style="bottom:-220px;right:-160px;width:560px;height:560px;background:radial-gradient(circle,rgba(90,176,227,.18),transparent 65%)"></div>
+  <div class="gtv-wrap">
+    <div class="gtv-head gtv-reveal">
+      <p class="gtv-eyebrow">The process</p>
+      <h2 class="gtv-h2" id="gtv-process-title">From Profile Assessment to <span class="gtv-grad-text">Immigration Handoff.</span></h2>
+    </div>
+    <ol class="gtv-timeline gtv-stagger">
+      <li class="gtv-step"><span class="gtv-step-num" aria-hidden="true">01</span><div class="gtv-step-body"><p class="gtv-step-phase">Phase 01</p><h3>Profile Assessment</h3><p>Review the candidate's background, professional achievements, existing evidence and potential route relevance.</p></div></li>
+      <li class="gtv-step"><span class="gtv-step-num" aria-hidden="true">02</span><div class="gtv-step-body"><p class="gtv-step-phase">Phase 02</p><h3>Gap Analysis &amp; Roadmap</h3><p>Map the existing profile against relevant requirements, identify development areas and prepare a personalised roadmap.</p></div></li>
+      <li class="gtv-step"><span class="gtv-step-num" aria-hidden="true">03</span><div class="gtv-step-body"><p class="gtv-step-phase">Phase 03</p><h3>Technical Development</h3><p>Strengthen relevant technical capabilities through targeted learning, mentorship and practical problem-solving.</p></div></li>
+      <li class="gtv-step"><span class="gtv-step-num" aria-hidden="true">04</span><div class="gtv-step-body"><p class="gtv-step-phase">Phase 04</p><h3>Project &amp; Portfolio Development</h3><p>Develop and document genuine technical contributions, individual responsibilities, innovation and measurable impact where verifiable.</p></div></li>
+      <li class="gtv-step"><span class="gtv-step-num" aria-hidden="true">05</span><div class="gtv-step-body"><p class="gtv-step-phase">Phase 05</p><h3>Recognition &amp; Evidence Readiness</h3><p>Strengthen professional visibility, organise supporting evidence, map achievements against relevant criteria and prepare for recommender discussions.</p></div></li>
+      <li class="gtv-step"><span class="gtv-step-num" aria-hidden="true">06</span><div class="gtv-step-body"><p class="gtv-step-phase">Phase 06</p><h3>Immigration Partner Handoff</h3><p>Prepare a structured profile and evidence handoff for an appropriately regulated immigration partner, who handles immigration/legal advice and application-related matters.</p><span class="gtv-step-handoff">Regulated partner takes over</span></div></li>
+    </ol>
+    <p class="gtv-commit gtv-reveal"><svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-clock"/></svg><span>The programme is designed to work alongside your professional commitments. The expected weekly commitment and overall duration are discussed based on your individual roadmap.</span></p>
+  </div>
+</section>
+
+<!-- ============ 7. WHAT WE DO / DON'T ============ -->
+<section class="gtv-light" aria-labelledby="gtv-scope-title">
+  <div class="gtv-wrap">
+    <div class="gtv-head gtv-reveal">
+      <p class="gtv-eyebrow">Scope &amp; responsibilities</p>
+      <h2 class="gtv-h2" id="gtv-scope-title">A Transparent Approach. <span class="gtv-grad-text">Clear Responsibilities.</span></h2>
+    </div>
+    <div class="gtv-compare gtv-stagger">
+      <article class="gtv-card gtv-do">
+        <div class="gtv-compare-head"><span class="gtv-compare-badge" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span><h3>What We Do</h3></div>
+        <ul>
+          <li><span class="gtv-mark gtv-mark-yes" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Assess your professional profile.</li>
+          <li><span class="gtv-mark gtv-mark-yes" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Identify evidence gaps and development priorities.</li>
+          <li><span class="gtv-mark gtv-mark-yes" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Provide technical development and mentorship.</li>
+          <li><span class="gtv-mark gtv-mark-yes" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Guide real-world project and portfolio development.</li>
+          <li><span class="gtv-mark gtv-mark-yes" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Help document innovation and professional contributions.</li>
+          <li><span class="gtv-mark gtv-mark-yes" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Support thought leadership and external contribution strategies.</li>
+          <li><span class="gtv-mark gtv-mark-yes" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Organise evidence and prepare structured documentation.</li>
+          <li><span class="gtv-mark gtv-mark-yes" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-check"/></svg></span>Coordinate the handoff to a regulated immigration partner.</li>
+        </ul>
+      </article>
+      <article class="gtv-card gtv-dont">
+        <div class="gtv-compare-head"><span class="gtv-compare-badge" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-x"/></svg></span><h3>What We Don't Do</h3></div>
+        <ul>
+          <li><span class="gtv-mark gtv-mark-no" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-x"/></svg></span>Guarantee endorsement or a visa.</li>
+          <li><span class="gtv-mark gtv-mark-no" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-x"/></svg></span>Provide immigration or legal advice.</li>
+          <li><span class="gtv-mark gtv-mark-no" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-x"/></svg></span>Submit endorsement applications as a regulated immigration adviser.</li>
+          <li><span class="gtv-mark gtv-mark-no" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-x"/></svg></span>Manufacture professional achievements or technical contributions.</li>
+          <li><span class="gtv-mark gtv-mark-no" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-x"/></svg></span>Buy, provide or write recommendation letters on behalf of referees.</li>
+          <li><span class="gtv-mark gtv-mark-no" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-x"/></svg></span>Promise awards, publications or speaking opportunities.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="gtv-statement gtv-reveal"><strong>Our responsibility is to help candidates develop genuine professional achievements and organise their evidence.</strong> Endorsement and visa decisions are independent decisions made by the relevant authorities.</p>
+  </div>
+</section>
+
+<!-- ============ 8. THE PROFILE ASSESSMENT DELIVERABLE ============ -->
+<section class="gtv-white" id="gtv-assessment" aria-labelledby="gtv-assess-title">
+  <div class="gtv-wrap">
+    <div class="gtv-head gtv-reveal">
+      <p class="gtv-eyebrow">The profile assessment</p>
+      <h2 class="gtv-h2" id="gtv-assess-title">Know Where You Stand <span class="gtv-grad-text">Before You Invest in the Journey.</span></h2>
+      <p class="gtv-lead">Every candidate begins with an individual profile assessment. We examine the available information, identify evidence gaps and provide a clear recommendation on the next steps.</p>
+    </div>
+
+    <div class="gtv-assess">
+      <div class="gtv-doc gtv-reveal">
+        <div class="gtv-doc-bar">
+          <p class="gtv-doc-bar-title"><svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-doc"/></svg>What your assessment contains</p>
+          <span class="gtv-tag">10 sections</span>
+        </div>
+        <div class="gtv-doc-grid">
+          <div class="gtv-doc-item"><span class="gtv-doc-num" aria-hidden="true">01</span><div><h3>Executive Summary</h3><p>A concise overview of the candidate's professional profile and preliminary assessment.</p></div></div>
+          <div class="gtv-doc-item"><span class="gtv-doc-num" aria-hidden="true">02</span><div><h3>Professional Profile Review</h3><p>Career history, technical expertise, responsibilities and professional narrative.</p></div></div>
+          <div class="gtv-doc-item"><span class="gtv-doc-num" aria-hidden="true">03</span><div><h3>Route Relevance Assessment</h3><p>Preliminary assessment of Digital Technology route relevance and potential Talent/Promise positioning.</p></div></div>
+          <div class="gtv-doc-item"><span class="gtv-doc-num" aria-hidden="true">04</span><div><h3>Innovation &amp; Contribution Analysis</h3><p>Review of technical innovation, significant contributions and individual attribution.</p></div></div>
+          <div class="gtv-doc-item"><span class="gtv-doc-num" aria-hidden="true">05</span><div><h3>Recognition &amp; External Contribution Review</h3><p>Assessment of awards, publications, community involvement and external recognition.</p></div></div>
+          <div class="gtv-doc-item"><span class="gtv-doc-num" aria-hidden="true">06</span><div><h3>Evidence Gap Matrix</h3><p>Structured identification of existing evidence, missing information, weaknesses and priorities.</p></div></div>
+          <div class="gtv-doc-item"><span class="gtv-doc-num" aria-hidden="true">07</span><div><h3>Technical Portfolio Assessment</h3><p>Review of technical projects, GitHub, product contributions and portfolio development needs.</p></div></div>
+          <div class="gtv-doc-item"><span class="gtv-doc-num" aria-hidden="true">08</span><div><h3>Personalised Roadmap</h3><p>A prioritised development plan with milestones and dependencies.</p></div></div>
+          <div class="gtv-doc-item"><span class="gtv-doc-num" aria-hidden="true">09</span><div><h3>Recommender Readiness</h3><p>Identification of potential professional referees and gaps in supporting recommendations.</p></div></div>
+          <div class="gtv-doc-item"><span class="gtv-doc-num" aria-hidden="true">10</span><div><h3>Recommended Next Steps</h3><p>A clear action plan, including whether to proceed, develop further or seek regulated immigration advice first.</p></div></div>
+        </div>
+      </div>
+
+      <div class="gtv-aside">
+        <div class="gtv-card gtv-reveal">
+          <p class="gtv-card-kicker">The recommendation</p>
+          <h3>Not every assessment ends in enrolment.</h3>
+          <p class="gtv-aside-intro">The assessment closes with one of three recommendations, based on what your evidence actually shows.</p>
+          <ul class="gtv-outcomes">
+            <li class="gtv-o1"><span class="gtv-outcome-ic" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-arrowr"/></svg></span><div><strong>Proceed with the programme</strong><span>Your background shows a relevant Digital Technology profile with gaps the programme can genuinely address.</span></div></li>
+            <li class="gtv-o2"><span class="gtv-outcome-ic" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-pause"/></svg></span><div><strong>Develop further first</strong><span>Build more genuine experience or contributions before investing in profile development, with a reassessment later.</span></div></li>
+            <li class="gtv-o3"><span class="gtv-outcome-ic" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-shield"/></svg></span><div><strong>Seek regulated immigration advice first</strong><span>Where Digital Technology route relevance is not established, we will say so and recommend not enrolling now.</span></div></li>
+          </ul>
+          <a class="gtv-btn gtv-btn-primary gtv-aside-cta" href="/contact-us/" data-gtv-book>Book a Profile Assessment <span class="gtv-arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="gtv-honest gtv-reveal">
+          <p class="gtv-card-kicker">How every assessment is built</p>
+          <p><strong>Evidence first, conclusions second.</strong> If a portfolio project or recognition activity would not reflect your real work, we will not recommend it.</p>
+          <ul class="gtv-principles">
+            <li><svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-check"/></svg>Each claim is labelled by evidence status: documented, candidate-asserted, not provided or contradictory.</li>
+            <li><svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-check"/></svg>Criteria are mapped against current official GOV.UK guidance, checked at the assessment date.</li>
+            <li><svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-check"/></svg>No success probability is given or implied.</li>
+            <li><svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-check"/></svg>Open questions for a regulated adviser are listed, not answered by us.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="gtv-fineprint"><svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-info"/></svg><span>Assessments are preliminary professional profile-development assessments, not official eligibility decisions or immigration/legal advice. Recommendations depend on the information supplied and may change following verification.</span></p>
+  </div>
+</section>
+
+<!-- ============ 8b. TESTIMONIALS — ILLUSTRATIVE PLACEHOLDERS ============
+  !! DO NOT PUBLISH AS-IS. The six people and quotes below are FICTIONAL examples that show the
+  layout only. Before go-live, replace each card with a verified, consented client testimonial
+  (and approved photo), or delete this whole <section>. When all cards are verified, remove the
+  .gtv-illus-note paragraph and the "Illustrative" tags.
+  Photo: inside .gtv-avatar, replace the initials with <img class="gtv-avatar-img" src="..." alt="">.
+  No Review/rating schema is output for this section, by design.
+-->
+<section class="gtv-dark gtv-testimonials" id="gtv-testimonials" aria-labelledby="gtv-testimonials-title" data-gtv-illustrative="true">
+  <div class="gtv-gridbg"></div>
+  <div class="gtv-glow" style="top:-140px;right:-120px;width:520px;height:520px;background:radial-gradient(circle,rgba(90,176,227,.16),transparent 65%)"></div>
+  <div class="gtv-wrap">
+    <div class="gtv-head gtv-reveal">
+      <p class="gtv-eyebrow">Candidate perspectives</p>
+      <h2 class="gtv-h2" id="gtv-testimonials-title">What Technology Professionals <span class="gtv-grad-text">Value in the Process.</span></h2>
+      <p class="gtv-lead">How candidates describe the assessment, evidence work, portfolio guidance and mentorship.</p>
+    </div>
+    <p class="gtv-illus-note gtv-reveal" role="note"><svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-info"/></svg><span><strong>Illustrative examples, not client testimonials.</strong> The names, roles and quotes below are placeholders that show how this section will look. They will be replaced with verified, consented testimonials before publication.</span></p>
+    <div class="gtv-grid-3 gtv-tgrid gtv-stagger">
+      <figure class="gtv-tcard">
+        <div class="gtv-tcard-top"><span class="gtv-qmark" aria-hidden="true">&ldquo;</span><span class="gtv-tag gtv-illus-tag">Illustrative</span></div>
+        <blockquote><p>The assessment was more candid than I expected. It separated the work I could actually evidence from the work that only existed in internal documents, and that changed how I planned the next few months.</p></blockquote>
+        <p class="gtv-tfocus"><span>Profile assessment</span><span>Evidence gaps</span></p>
+        <figcaption class="gtv-tperson"><span class="gtv-avatar gtv-av1" aria-hidden="true">AR</span><span><strong>Ananya R.</strong><span>AI/ML Engineer</span></span></figcaption>
+      </figure>
+      <figure class="gtv-tcard">
+        <div class="gtv-tcard-top"><span class="gtv-qmark" aria-hidden="true">&ldquo;</span><span class="gtv-tag gtv-illus-tag">Illustrative</span></div>
+        <blockquote><p>Most of my strongest work sat behind confidentiality agreements. Working through approved summaries and redacted documentation gave me a way to show my contribution without disclosing anything I shouldn't.</p></blockquote>
+        <p class="gtv-tfocus"><span>Confidential work</span><span>Documentation</span></p>
+        <figcaption class="gtv-tperson"><span class="gtv-avatar gtv-av2" aria-hidden="true">DO</span><span><strong>Daniel O.</strong><span>Data Scientist</span></span></figcaption>
+      </figure>
+      <figure class="gtv-tcard">
+        <div class="gtv-tcard-top"><span class="gtv-qmark" aria-hidden="true">&ldquo;</span><span class="gtv-tag gtv-illus-tag">Illustrative</span></div>
+        <blockquote><p>My GitHub was a collection of half-finished repositories. The portfolio guidance helped me turn one genuine project into something structured, documented and clearly attributable to me.</p></blockquote>
+        <p class="gtv-tfocus"><span>Technical portfolio</span><span>GitHub</span></p>
+        <figcaption class="gtv-tperson"><span class="gtv-avatar gtv-av3" aria-hidden="true">WL</span><span><strong>Wei L.</strong><span>Software Engineer</span></span></figcaption>
+      </figure>
+      <figure class="gtv-tcard">
+        <div class="gtv-tcard-top"><span class="gtv-qmark" aria-hidden="true">&ldquo;</span><span class="gtv-tag gtv-illus-tag">Illustrative</span></div>
+        <blockquote><p>As a founder, I found it hard to separate my own technical contribution from the company's. The evidence gap matrix made that distinction clear and showed exactly what still needed documenting.</p></blockquote>
+        <p class="gtv-tfocus"><span>Innovation &amp; contribution</span><span>Founder profile</span></p>
+        <figcaption class="gtv-tperson"><span class="gtv-avatar gtv-av4" aria-hidden="true">FK</span><span><strong>Farah K.</strong><span>Technology Founder</span></span></figcaption>
+      </figure>
+      <figure class="gtv-tcard">
+        <div class="gtv-tcard-top"><span class="gtv-qmark" aria-hidden="true">&ldquo;</span><span class="gtv-tag gtv-illus-tag">Illustrative</span></div>
+        <blockquote><p>I appreciated being told early that my profile needed more depth before going further. The roadmap gave me realistic milestones to work towards rather than false confidence.</p></blockquote>
+        <p class="gtv-tfocus"><span>Personalised roadmap</span><span>Honest advice</span></p>
+        <figcaption class="gtv-tperson"><span class="gtv-avatar gtv-av5" aria-hidden="true">MS</span><span><strong>Mateus S.</strong><span>Product Manager</span></span></figcaption>
+      </figure>
+      <figure class="gtv-tcard">
+        <div class="gtv-tcard-top"><span class="gtv-qmark" aria-hidden="true">&ldquo;</span><span class="gtv-tag gtv-illus-tag">Illustrative</span></div>
+        <blockquote><p>The mentorship sessions were practical. We focused on genuine knowledge sharing, technical writing and community contribution that fitted around my day job, not on chasing recognition for its own sake.</p></blockquote>
+        <p class="gtv-tfocus"><span>Mentorship</span><span>Thought leadership</span></p>
+        <figcaption class="gtv-tperson"><span class="gtv-avatar gtv-av6" aria-hidden="true">NH</span><span><strong>Nadia H.</strong><span>Cybersecurity Professional</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. CANDIDATE JOURNEY ============ -->
+<section class="gtv-sky" aria-labelledby="gtv-journey-title">
+  <div class="gtv-wrap">
+    <div class="gtv-head gtv-reveal">
+      <p class="gtv-eyebrow">The journey</p>
+      <h2 class="gtv-h2" id="gtv-journey-title">A Clearer Picture of Your <span class="gtv-grad-text">Professional Journey.</span></h2>
+    </div>
+    <div class="gtv-journey gtv-stagger">
+      <div class="gtv-stage">
+        <div class="gtv-stage-head"><p class="gtv-stage-label">Stage 1</p></div>
+        <h3>Understand</h3>
+        <div class="gtv-progress" aria-hidden="true"><i style="--w:33%"></i></div>
+        <ol>
+          <li><span class="gtv-stage-n" aria-hidden="true">1</span>Understand your current professional standing.</li>
+          <li><span class="gtv-stage-n" aria-hidden="true">2</span>Identify your strongest achievements.</li>
+          <li><span class="gtv-stage-n" aria-hidden="true">3</span>Recognise evidence and documentation gaps.</li>
+        </ol>
+      </div>
+      <div class="gtv-stage">
+        <div class="gtv-stage-head"><p class="gtv-stage-label">Stage 2</p></div>
+        <h3>Develop</h3>
+        <div class="gtv-progress" aria-hidden="true"><i style="--w:66%"></i></div>
+        <ol start="4">
+          <li><span class="gtv-stage-n" aria-hidden="true">4</span>Develop genuine technical and professional contributions.</li>
+          <li><span class="gtv-stage-n" aria-hidden="true">5</span>Build a structured portfolio and evidence record.</li>
+        </ol>
+      </div>
+      <div class="gtv-stage gtv-stage-last">
+        <div class="gtv-stage-head"><p class="gtv-stage-label">Stage 3</p></div>
+        <h3>Prepare</h3>
+        <div class="gtv-progress" aria-hidden="true"><i style="--w:100%"></i></div>
+        <ol start="6">
+          <li><span class="gtv-stage-n" aria-hidden="true">6</span>Prepare for the next stage with an appropriately regulated immigration partner.</li>
+        </ol>
+      </div>
+    </div>
+    <p class="gtv-journey-note gtv-reveal">The pace of each stage depends on your starting profile, your roadmap and the evidence you develop.</p>
+  </div>
+</section>
+
+<!-- ============ 10. FAQ ============ -->
+<section class="gtv-white" id="gtv-faq" aria-labelledby="gtv-faq-title">
+  <div class="gtv-wrap">
+    <div class="gtv-faq-layout">
+      <div class="gtv-head gtv-reveal">
+        <p class="gtv-eyebrow">FAQs</p>
+        <h2 class="gtv-h2" id="gtv-faq-title">Frequently Asked <span class="gtv-grad-text">Questions.</span></h2>
+        <p class="gtv-lead">Straight answers about what the programme is, and what it is not.</p>
+      </div>
+      <div class="gtv-faq-list gtv-reveal">
+        <details class="gtv-faq"><summary><h3 class="gtv-faq-q">What is the UK Global Talent Visa?</h3><span class="gtv-faq-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-plus"/></svg></span></summary><p class="gtv-faq-a">The UK Global Talent Visa is an immigration route for individuals recognised as leaders or potential leaders in eligible fields. This programme focuses on the Digital Technology pathway.</p></details>
+        <details class="gtv-faq"><summary><h3 class="gtv-faq-q">What is the difference between Exceptional Talent and Exceptional Promise?</h3><span class="gtv-faq-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-plus"/></svg></span></summary><p class="gtv-faq-a">They represent different pathways within the Global Talent route. The appropriate pathway depends on the candidate's professional background, experience and supporting evidence.</p></details>
+        <details class="gtv-faq"><summary><h3 class="gtv-faq-q">Do I need to leave my current job?</h3><span class="gtv-faq-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-plus"/></svg></span></summary><p class="gtv-faq-a">No. The programme is designed to work alongside professional commitments. The expected weekly time commitment will be discussed during the assessment.</p></details>
+        <details class="gtv-faq"><summary><h3 class="gtv-faq-q">Does First500days guarantee endorsement or a visa?</h3><span class="gtv-faq-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-plus"/></svg></span></summary><p class="gtv-faq-a">No. Endorsement and visa decisions are made independently by the relevant authorities. First500days focuses on profile development, evidence organisation and preparation.</p></details>
+        <details class="gtv-faq"><summary><h3 class="gtv-faq-q">What if most of my work is confidential?</h3><span class="gtv-faq-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-plus"/></svg></span></summary><p class="gtv-faq-a">Confidential contributions can be assessed using appropriate redacted documentation, approved summaries and alternative corroborating evidence. Candidates should never disclose confidential employer information without permission.</p></details>
+        <details class="gtv-faq"><summary><h3 class="gtv-faq-q">Do you provide recommendation letters?</h3><span class="gtv-faq-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-plus"/></svg></span></summary><p class="gtv-faq-a">No. We help identify suitable professional referees and organise factual summaries of achievements. Recommendation letters must be independently written and approved by the referees themselves.</p></details>
+        <details class="gtv-faq"><summary><h3 class="gtv-faq-q">Do you provide immigration advice?</h3><span class="gtv-faq-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-plus"/></svg></span></summary><p class="gtv-faq-a">No. Immigration and legal advice is handled by an appropriately regulated immigration professional.</p></details>
+        <details class="gtv-faq"><summary><h3 class="gtv-faq-q">Can someone from a non-technical background apply?</h3><span class="gtv-faq-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-plus"/></svg></span></summary><p class="gtv-faq-a">The Digital Technology route has specific field and professional requirements. A profile assessment helps determine whether the candidate's experience is relevant. A different professional background does not automatically establish route suitability.</p></details>
+        <details class="gtv-faq"><summary><h3 class="gtv-faq-q">How much does the programme cost and how long does it take?</h3><span class="gtv-faq-icon" aria-hidden="true"><svg class="gtv-i"><use href="#gtv-i-plus"/></svg></span></summary><p class="gtv-faq-a">The programme structure, commercial terms and expected timeline are discussed following the initial profile assessment.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. FINAL CTA ============ -->
+<section class="gtv-dark gtv-final" aria-labelledby="gtv-final-title">
+  <div class="gtv-gridbg"></div>
+  <div class="gtv-glow" style="top:50%;left:50%;width:780px;height:420px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(46,123,196,.32),transparent 68%)"></div>
+  <div class="gtv-wrap gtv-reveal">
+    <p class="gtv-eyebrow">Start here</p>
+    <h2 class="gtv-h2" id="gtv-final-title">Your Global Talent Journey Starts with <span class="gtv-grad-text">Understanding Your Profile.</span></h2>
+    <p class="gtv-lead">Before investing time and resources in the process, understand your strengths, identify your evidence gaps and determine the next practical steps.</p>
+    <div class="gtv-ctas">
+      <a class="gtv-btn gtv-btn-primary" href="/contact-us/" data-gtv-book>Book Your Profile Assessment <span class="gtv-arrow" aria-hidden="true">→</span></a>
+      <a class="gtv-btn gtv-btn-ghost" href="/contact-us/">Contact Our Team <span class="gtv-arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12. DISCLAIMER (sits directly above the existing site footer) ============ -->
+<section class="gtv-disclaimer" aria-labelledby="gtv-disclaimer-title">
+  <div class="gtv-wrap">
+    <div class="gtv-disclaimer-inner">
+      <svg class="gtv-i" aria-hidden="true"><use href="#gtv-i-info"/></svg>
+      <div>
+        <h2 id="gtv-disclaimer-title">Important information</h2>
+        <p>First500days provides professional profile-development, technical development and evidence-organisation services. We are not a law firm or regulated immigration adviser and do not provide immigration or legal advice. Endorsement and visa decisions are made independently by the relevant authorities. No outcome is guaranteed. Requirements and guidance may change. Candidates should consult current official UK government guidance and seek advice from an appropriately regulated immigration professional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the UK Global Talent Visa?","acceptedAnswer":{"@type":"Answer","text":"The UK Global Talent Visa is an immigration route for individuals recognised as leaders or potential leaders in eligible fields. This programme focuses on the Digital Technology pathway."}},
+{"@type":"Question","name":"What is the difference between Exceptional Talent and Exceptional Promise?","acceptedAnswer":{"@type":"Answer","text":"They represent different pathways within the Global Talent route. The appropriate pathway depends on the candidate's professional background, experience and supporting evidence."}},
+{"@type":"Question","name":"Do I need to leave my current job?","acceptedAnswer":{"@type":"Answer","text":"No. The programme is designed to work alongside professional commitments. The expected weekly time commitment will be discussed during the assessment."}},
+{"@type":"Question","name":"Does First500days guarantee endorsement or a visa?","acceptedAnswer":{"@type":"Answer","text":"No. Endorsement and visa decisions are made independently by the relevant authorities. First500days focuses on profile development, evidence organisation and preparation."}},
+{"@type":"Question","name":"What if most of my work is confidential?","acceptedAnswer":{"@type":"Answer","text":"Confidential contributions can be assessed using appropriate redacted documentation, approved summaries and alternative corroborating evidence. Candidates should never disclose confidential employer information without permission."}},
+{"@type":"Question","name":"Do you provide recommendation letters?","acceptedAnswer":{"@type":"Answer","text":"No. We help identify suitable professional referees and organise factual summaries of achievements. Recommendation letters must be independently written and approved by the referees themselves."}},
+{"@type":"Question","name":"Do you provide immigration advice?","acceptedAnswer":{"@type":"Answer","text":"No. Immigration and legal advice is handled by an appropriately regulated immigration professional."}},
+{"@type":"Question","name":"Can someone from a non-technical background apply?","acceptedAnswer":{"@type":"Answer","text":"The Digital Technology route has specific field and professional requirements. A profile assessment helps determine whether the candidate's experience is relevant. A different professional background does not automatically establish route suitability."}},
+{"@type":"Question","name":"How much does the programme cost and how long does it take?","acceptedAnswer":{"@type":"Answer","text":"The programme structure, commercial terms and expected timeline are discussed following the initial profile assessment."}}
+]}
+</script>
+
+<script>
+(function () {
+  var root = document.querySelector('.f5d-gtv-page');
+  if (!root) return;
+  root.classList.add('gtv-js');
+
+  /* 1. Booking link — one value, applied to every Profile Assessment CTA */
+  var link = (root.getAttribute('data-booking-link') || '').trim();
+  var configured = link && link !== '[BOOKING_LINK]';
+  if (configured) {
+    var external = /^https?:\/\//i.test(link) && link.indexOf(location.host) === -1;
+    root.querySelectorAll('[data-gtv-book]').forEach(function (a) {
+      a.setAttribute('href', link);
+      if (external) { a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener'); }
+    });
+  }
+
+  /* 1b. Sticky "Book Free Consultation" CTA. Uses the SAME destination as the assessment CTAs
+     (data-booking-link, or /contact-us/ while unset). On this page only, it is docked into the
+     existing sticky site header (next to the logo / menu button); the header template itself is
+     not changed. If no site header is found (e.g. standalone preview) it floats instead. */
+  var hcta = document.createElement('a');
+  hcta.className = 'gtv-hcta';
+  hcta.setAttribute('data-gtv-hcta', '');
+  hcta.setAttribute('href', configured ? link : '/contact-us/');
+  hcta.setAttribute('aria-label', 'Book Free Consultation');
+  if (configured && external) { hcta.setAttribute('target', '_blank'); hcta.setAttribute('rel', 'noopener'); }
+  hcta.innerHTML = '<span class="gtv-hcta-long">Book Free Consultation</span><span class="gtv-hcta-short">Free Consultation</span><span class="gtv-hcta-stack">Free<br>Consultation</span><span class="gtv-hcta-arrow" aria-hidden="true">→</span>';
+  var siteHeader = document.querySelector('.f5d-header .site-header');
+  var headerInner = siteHeader && siteHeader.querySelector('.header-inner');
+  var headerPos = siteHeader && getComputedStyle(siteHeader).position;
+  if (headerInner && (headerPos === 'sticky' || headerPos === 'fixed') && !siteHeader.querySelector('[data-gtv-hcta]')) {
+    hcta.classList.add('gtv-hcta-docked');
+    siteHeader.appendChild(hcta);
+    var vis = function (el) { if (!el) return null; var r = el.getBoundingClientRect(); return r.width && getComputedStyle(el).display !== 'none' ? r : null; };
+    /* Place the button in the free space at the right of the header row:
+       left of the menu button (mobile/tablet) or right of the nav (desktop), never over the logo/nav. */
+    var reset = function () {
+      hcta.classList.remove('gtv-hm-full', 'gtv-hm-short', 'gtv-hm-stack', 'gtv-hcta-inflow', 'gtv-hcta-float', 'gtv-hcta-on');
+      hcta.classList.add('gtv-hcta-docked');
+      hcta.style.left = hcta.style.top = '';
+    };
+    var layout = function () {
+      reset();
+      /* 1. Desktop: sit in the header row after the nav, if the row still fits on one line */
+      var navEl = vis(headerInner.querySelector('.desktop-nav'));
+      if (navEl) {
+        var baseH = siteHeader.offsetHeight;
+        hcta.classList.add('gtv-hcta-inflow', 'gtv-hm-full');
+        headerInner.insertBefore(hcta, headerInner.querySelector('.hamburger'));
+        var lg = vis(headerInner.querySelector('.header-logo')), cr = hcta.getBoundingClientRect();
+        if (siteHeader.offsetHeight <= baseH && lg && Math.abs((cr.top + cr.height / 2) - (lg.top + lg.height / 2)) < 12) { hcta.classList.add('gtv-hm-ready'); return; }
+        reset();
+      }
+      if (hcta.parentNode !== siteHeader) siteHeader.appendChild(hcta);
+      var hr = siteHeader.getBoundingClientRect();
+      var ir = headerInner.getBoundingClientRect();
+      var is = getComputedStyle(headerInner);
+      var logo = vis(headerInner.querySelector('.header-logo')) || vis(headerInner.firstElementChild);
+      var nav = vis(headerInner.querySelector('.desktop-nav'));
+      var burger = vis(headerInner.querySelector('.hamburger'));
+      var minLeft = (nav || logo ? (nav || logo).right : hr.left) + (nav ? 24 : 12);
+      var anchor = burger || nav || logo;
+      var cy = anchor ? anchor.top + anchor.height / 2 : hr.top + hr.height / 2;
+      var rightCandidates = burger ? [burger.left - 10] : [ir.right - parseFloat(is.paddingRight), hr.right - 20];
+      var modes = ['gtv-hm-full', 'gtv-hm-short', 'gtv-hm-stack'];
+      var placed = false;
+      for (var m = 0; m < modes.length && !placed; m++) {
+        hcta.classList.remove('gtv-hm-full', 'gtv-hm-short', 'gtv-hm-stack');
+        hcta.classList.add(modes[m]);
+        var w = hcta.offsetWidth, h = hcta.offsetHeight;
+        for (var k = 0; k < rightCandidates.length; k++) {
+          var left = rightCandidates[k] - w;
+          if (left >= minLeft) {
+            hcta.style.left = Math.round(left - hr.left) + 'px';
+            hcta.style.top = Math.round(cy - h / 2 - hr.top) + 'px';
+            placed = true; break;
+          }
+        }
+      }
+      if (!placed) {
+        /* 3. No free space in the header row at this width: keep it visible as a corner pill instead */
+        hcta.classList.remove('gtv-hcta-docked', 'gtv-hm-full', 'gtv-hm-stack');
+        hcta.classList.add('gtv-hcta-float', 'gtv-hcta-on', 'gtv-hm-short');
+        hcta.style.left = hcta.style.top = '';
+        document.body.appendChild(hcta); /* the header's backdrop-filter would otherwise trap position:fixed */
+      }
+      hcta.classList.add('gtv-hm-ready');
+    };
+    var queued = false;
+    var queue = function () { if (queued) return; queued = true; requestAnimationFrame(function () { queued = false; layout(); }); };
+    layout();
+    window.addEventListener('resize', queue);
+    window.addEventListener('scroll', queue, { passive: true }); /* header shrinks its logo when scrolled */
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+    window.addEventListener('load', layout);
+    setTimeout(layout, 400); /* after the header's own logo-height transition */
+  } else if (!headerInner) {
+    hcta.classList.add('gtv-hcta-float');
+    document.body.appendChild(hcta);
+    var showFloat = function () { hcta.classList.toggle('gtv-hcta-on', window.scrollY > 320); };
+    window.addEventListener('scroll', showFloat, { passive: true });
+    showFloat();
+  }
+
+  /* 2. Smooth scroll for in-page links (respects reduced motion + sticky header via scroll-margin) */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.querySelectorAll('[data-gtv-scroll]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = (a.getAttribute('href') || '').slice(1);
+      var target = id && document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      if (history.replaceState) history.replaceState(null, '', '#' + id);
+      target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+    });
+  });
+
+  /* 3. Reveal on scroll */
+  var items = root.querySelectorAll('.gtv-reveal, .gtv-stagger');
+  /* after the entrance finishes, drop the reveal rules so hover transforms work normally */
+  function done(el) { el.classList.add('gtv-in'); setTimeout(function () { el.classList.add('gtv-done'); }, 1300); }
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { done(en.target); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('gtv-in', 'gtv-done'); });
+  }
+})();
+</script>
+</div>

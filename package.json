@@ -1,0 +1,14 @@
+{
+  "name": "first500days-gtv-page",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Global Talent Visa programme page body (Elementor HTML widget) for first500days.com",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node tools/build.mjs && node tools/test.mjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^23.11.1"
+  }
+}

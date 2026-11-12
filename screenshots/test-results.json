@@ -1,0 +1,837 @@
+[
+  {
+    "name": "[desktop-1440] 6 testimonial cards in 3 col, all labelled Illustrative",
+    "pass": true,
+    "detail": "cols 3, tags 6, note true"
+  },
+  {
+    "name": "[desktop-1440] testimonial avatars identical size & equal card heights per row",
+    "pass": true,
+    "detail": "52x52"
+  },
+  {
+    "name": "[desktop-1440] hero dashboard: 6 checked items, inside viewport",
+    "pass": true,
+    "detail": "{\"l\":830,\"r\":1370,\"w\":540,\"h1w\":680}"
+  },
+  {
+    "name": "[desktop-1440] dashboard does not overpower the H1 column",
+    "pass": true,
+    "detail": "540px"
+  },
+  {
+    "name": "[desktop-1440] no clipped text in dashboard/testimonials",
+    "pass": true,
+    "detail": "0"
+  },
+  {
+    "name": "[desktop-1440] buttons >= 44px tall (tap targets)",
+    "pass": true,
+    "detail": "0 small"
+  },
+  {
+    "name": "[desktop-1440] no horizontal overflow",
+    "pass": true,
+    "detail": "scrollWidth 1440/1440"
+  },
+  {
+    "name": "[desktop-1440] service grid = 3 col",
+    "pass": true,
+    "detail": "got 3"
+  },
+  {
+    "name": "[desktop-1440] timeline horizontal",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[desktop-1440] exactly one H1",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[desktop-1440] no console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[laptop-1280] 6 testimonial cards in 3 col, all labelled Illustrative",
+    "pass": true,
+    "detail": "cols 3, tags 6, note true"
+  },
+  {
+    "name": "[laptop-1280] testimonial avatars identical size & equal card heights per row",
+    "pass": true,
+    "detail": "52x52"
+  },
+  {
+    "name": "[laptop-1280] hero dashboard: 6 checked items, inside viewport",
+    "pass": true,
+    "detail": "{\"l\":729,\"r\":1240,\"w\":511,\"h1w\":625}"
+  },
+  {
+    "name": "[laptop-1280] dashboard does not overpower the H1 column",
+    "pass": true,
+    "detail": "511px"
+  },
+  {
+    "name": "[laptop-1280] no clipped text in dashboard/testimonials",
+    "pass": true,
+    "detail": "0"
+  },
+  {
+    "name": "[laptop-1280] buttons >= 44px tall (tap targets)",
+    "pass": true,
+    "detail": "0 small"
+  },
+  {
+    "name": "[laptop-1280] no horizontal overflow",
+    "pass": true,
+    "detail": "scrollWidth 1280/1280"
+  },
+  {
+    "name": "[laptop-1280] service grid = 3 col",
+    "pass": true,
+    "detail": "got 3"
+  },
+  {
+    "name": "[laptop-1280] timeline horizontal",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[laptop-1280] exactly one H1",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[laptop-1280] no console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[tablet-1024] 6 testimonial cards in 2 col, all labelled Illustrative",
+    "pass": true,
+    "detail": "cols 2, tags 6, note true"
+  },
+  {
+    "name": "[tablet-1024] testimonial avatars identical size & equal card heights per row",
+    "pass": true,
+    "detail": "52x52"
+  },
+  {
+    "name": "[tablet-1024] hero dashboard: 6 checked items, inside viewport",
+    "pass": true,
+    "detail": "{\"l\":32,\"r\":652,\"w\":620,\"h1w\":960}"
+  },
+  {
+    "name": "[tablet-1024] no clipped text in dashboard/testimonials",
+    "pass": true,
+    "detail": "0"
+  },
+  {
+    "name": "[tablet-1024] buttons >= 44px tall (tap targets)",
+    "pass": true,
+    "detail": "0 small"
+  },
+  {
+    "name": "[tablet-1024] no horizontal overflow",
+    "pass": true,
+    "detail": "scrollWidth 1024/1024"
+  },
+  {
+    "name": "[tablet-1024] service grid = 2 col",
+    "pass": true,
+    "detail": "got 2"
+  },
+  {
+    "name": "[tablet-1024] timeline vertical",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[tablet-1024] exactly one H1",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[tablet-1024] no console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[tablet-820] 6 testimonial cards in 2 col, all labelled Illustrative",
+    "pass": true,
+    "detail": "cols 2, tags 6, note true"
+  },
+  {
+    "name": "[tablet-820] testimonial avatars identical size & equal card heights per row",
+    "pass": true,
+    "detail": "52x52"
+  },
+  {
+    "name": "[tablet-820] hero dashboard: 6 checked items, inside viewport",
+    "pass": true,
+    "detail": "{\"l\":32,\"r\":652,\"w\":620,\"h1w\":756}"
+  },
+  {
+    "name": "[tablet-820] no clipped text in dashboard/testimonials",
+    "pass": true,
+    "detail": "0"
+  },
+  {
+    "name": "[tablet-820] buttons >= 44px tall (tap targets)",
+    "pass": true,
+    "detail": "0 small"
+  },
+  {
+    "name": "[tablet-820] no horizontal overflow",
+    "pass": true,
+    "detail": "scrollWidth 820/820"
+  },
+  {
+    "name": "[tablet-820] service grid = 2 col",
+    "pass": true,
+    "detail": "got 2"
+  },
+  {
+    "name": "[tablet-820] timeline vertical",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[tablet-820] exactly one H1",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[tablet-820] no console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[tablet-768] 6 testimonial cards in 2 col, all labelled Illustrative",
+    "pass": true,
+    "detail": "cols 2, tags 6, note true"
+  },
+  {
+    "name": "[tablet-768] testimonial avatars identical size & equal card heights per row",
+    "pass": true,
+    "detail": "52x52"
+  },
+  {
+    "name": "[tablet-768] hero dashboard: 6 checked items, inside viewport",
+    "pass": true,
+    "detail": "{\"l\":32,\"r\":652,\"w\":620,\"h1w\":704}"
+  },
+  {
+    "name": "[tablet-768] no clipped text in dashboard/testimonials",
+    "pass": true,
+    "detail": "0"
+  },
+  {
+    "name": "[tablet-768] buttons >= 44px tall (tap targets)",
+    "pass": true,
+    "detail": "0 small"
+  },
+  {
+    "name": "[tablet-768] no horizontal overflow",
+    "pass": true,
+    "detail": "scrollWidth 768/768"
+  },
+  {
+    "name": "[tablet-768] service grid = 2 col",
+    "pass": true,
+    "detail": "got 2"
+  },
+  {
+    "name": "[tablet-768] timeline vertical",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[tablet-768] exactly one H1",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[tablet-768] no console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile-430] 6 testimonial cards in 1 col, all labelled Illustrative",
+    "pass": true,
+    "detail": "cols 1, tags 6, note true"
+  },
+  {
+    "name": "[mobile-430] testimonial avatars identical size & equal card heights per row",
+    "pass": true,
+    "detail": "52x52"
+  },
+  {
+    "name": "[mobile-430] hero dashboard: 6 checked items, inside viewport",
+    "pass": true,
+    "detail": "{\"l\":16,\"r\":414,\"w\":398,\"h1w\":398}"
+  },
+  {
+    "name": "[mobile-430] no clipped text in dashboard/testimonials",
+    "pass": true,
+    "detail": "0"
+  },
+  {
+    "name": "[mobile-430] buttons >= 44px tall (tap targets)",
+    "pass": true,
+    "detail": "0 small"
+  },
+  {
+    "name": "[mobile-430] no horizontal overflow",
+    "pass": true,
+    "detail": "scrollWidth 430/430"
+  },
+  {
+    "name": "[mobile-430] service grid = 1 col",
+    "pass": true,
+    "detail": "got 1"
+  },
+  {
+    "name": "[mobile-430] timeline vertical",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile-430] >=16px gutter",
+    "pass": true,
+    "detail": "card left 16px"
+  },
+  {
+    "name": "[mobile-430] full-width hero CTA",
+    "pass": true,
+    "detail": "398px"
+  },
+  {
+    "name": "[mobile-430] readable H1 size",
+    "pass": true,
+    "detail": "36.12px"
+  },
+  {
+    "name": "[mobile-430] exactly one H1",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile-430] no console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile-390] 6 testimonial cards in 1 col, all labelled Illustrative",
+    "pass": true,
+    "detail": "cols 1, tags 6, note true"
+  },
+  {
+    "name": "[mobile-390] testimonial avatars identical size & equal card heights per row",
+    "pass": true,
+    "detail": "52x52"
+  },
+  {
+    "name": "[mobile-390] hero dashboard: 6 checked items, inside viewport",
+    "pass": true,
+    "detail": "{\"l\":16,\"r\":374,\"w\":358,\"h1w\":358}"
+  },
+  {
+    "name": "[mobile-390] no clipped text in dashboard/testimonials",
+    "pass": true,
+    "detail": "0"
+  },
+  {
+    "name": "[mobile-390] buttons >= 44px tall (tap targets)",
+    "pass": true,
+    "detail": "0 small"
+  },
+  {
+    "name": "[mobile-390] no horizontal overflow",
+    "pass": true,
+    "detail": "scrollWidth 390/390"
+  },
+  {
+    "name": "[mobile-390] service grid = 1 col",
+    "pass": true,
+    "detail": "got 1"
+  },
+  {
+    "name": "[mobile-390] timeline vertical",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile-390] >=16px gutter",
+    "pass": true,
+    "detail": "card left 16px"
+  },
+  {
+    "name": "[mobile-390] full-width hero CTA",
+    "pass": true,
+    "detail": "358px"
+  },
+  {
+    "name": "[mobile-390] readable H1 size",
+    "pass": true,
+    "detail": "32.76px"
+  },
+  {
+    "name": "[mobile-390] exactly one H1",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile-390] no console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile-360] 6 testimonial cards in 1 col, all labelled Illustrative",
+    "pass": true,
+    "detail": "cols 1, tags 6, note true"
+  },
+  {
+    "name": "[mobile-360] testimonial avatars identical size & equal card heights per row",
+    "pass": true,
+    "detail": "52x52"
+  },
+  {
+    "name": "[mobile-360] hero dashboard: 6 checked items, inside viewport",
+    "pass": true,
+    "detail": "{\"l\":16,\"r\":344,\"w\":328,\"h1w\":328}"
+  },
+  {
+    "name": "[mobile-360] no clipped text in dashboard/testimonials",
+    "pass": true,
+    "detail": "0"
+  },
+  {
+    "name": "[mobile-360] buttons >= 44px tall (tap targets)",
+    "pass": true,
+    "detail": "0 small"
+  },
+  {
+    "name": "[mobile-360] no horizontal overflow",
+    "pass": true,
+    "detail": "scrollWidth 360/360"
+  },
+  {
+    "name": "[mobile-360] service grid = 1 col",
+    "pass": true,
+    "detail": "got 1"
+  },
+  {
+    "name": "[mobile-360] timeline vertical",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile-360] >=16px gutter",
+    "pass": true,
+    "detail": "card left 16px"
+  },
+  {
+    "name": "[mobile-360] full-width hero CTA",
+    "pass": true,
+    "detail": "328px"
+  },
+  {
+    "name": "[mobile-360] readable H1 size",
+    "pass": true,
+    "detail": "30.24px"
+  },
+  {
+    "name": "[mobile-360] exactly one H1",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile-360] no console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Booking CTAs fall back to /contact-us/ while [BOOKING_LINK] unset",
+    "pass": true,
+    "detail": "/contact-us/, /contact-us/, /contact-us/, /contact-us/"
+  },
+  {
+    "name": "\"Contact Our Team\" links to /contact-us/",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Booking CTA labels",
+    "pass": true,
+    "detail": "Book a Profile Assessment → / Book a Profile Assessment → / Book a Profile Assessment → / Book Your Profile Assessment →"
+  },
+  {
+    "name": "\"Explore the Programme\" scrolls to How It Works",
+    "pass": true,
+    "detail": "section top at 88px (scroll-margin 88px)"
+  },
+  {
+    "name": "URL hash updated to #gtv-process",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "9 FAQ items, all closed initially",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "FAQ opens on click",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "FAQ answer visible when open",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "FAQ closes on second click",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "FAQ opens with Enter key",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "FAQ closes with Space key",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Visible keyboard focus state on CTA",
+    "pass": true,
+    "detail": "solid 2px"
+  },
+  {
+    "name": "All interactive elements have accessible text",
+    "pass": true,
+    "detail": "15 elements"
+  },
+  {
+    "name": "Card hover lift",
+    "pass": true,
+    "detail": "matrix(1, 0, 0, 1, 0, -4)"
+  },
+  {
+    "name": "Page title",
+    "pass": true,
+    "detail": "UK Global Talent Visa Programme | First500days"
+  },
+  {
+    "name": "Meta description",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Canonical URL",
+    "pass": true,
+    "detail": "https://first500days.com/global-talent-visa/"
+  },
+  {
+    "name": "Open Graph title",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "FAQPage structured data valid JSON",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Configured booking URL applied to every assessment CTA",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "External booking URL opens in new tab with rel=noopener",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Sticky \"Book Free Consultation\" uses the same configured link",
+    "pass": true,
+    "detail": "https://calendly.com/example/gtv-profile-assessment _blank"
+  },
+  {
+    "name": "[preview 1440] sticky CTA -> /contact-us/ fallback, labelled \"Book Free Consultation\"",
+    "pass": true,
+    "detail": "{\"href\":\"/contact-us/\",\"label\":\"Book Free Consultation\",\"op\":\"0\"}"
+  },
+  {
+    "name": "[preview 1440] sticky CTA hidden over the hero (avoids duplicating the hero CTA)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[preview 1440] sticky CTA visible while scrolling, inside viewport, tappable",
+    "pass": true,
+    "detail": "{\"op\":\"1\",\"t\":16,\"b\":76,\"r\":1420,\"h\":60}"
+  },
+  {
+    "name": "[preview 1440] no console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[preview 390] sticky CTA -> /contact-us/ fallback, labelled \"Book Free Consultation\"",
+    "pass": true,
+    "detail": "{\"href\":\"/contact-us/\",\"label\":\"Book Free Consultation\",\"op\":\"0\"}"
+  },
+  {
+    "name": "[preview 390] sticky CTA hidden over the hero (avoids duplicating the hero CTA)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[preview 390] sticky CTA visible while scrolling, inside viewport, tappable",
+    "pass": true,
+    "detail": "{\"op\":\"1\",\"t\":842,\"b\":886,\"r\":376,\"h\":44}"
+  },
+  {
+    "name": "[preview 390] no console errors",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "Reduced-motion: all content visible",
+    "pass": true,
+    "detail": "0 hidden"
+  },
+  {
+    "name": "Without JavaScript: content visible",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[integration-desktop-1440] renders between existing header & footer",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[integration-desktop-1440] full-bleed width",
+    "pass": true,
+    "detail": "1440px"
+  },
+  {
+    "name": "[integration-desktop-1440] no horizontal overflow",
+    "pass": true,
+    "detail": "1440/1440"
+  },
+  {
+    "name": "[integration-desktop-1440] theme CSS does not override widget styles",
+    "pass": true,
+    "detail": "{\"font\":\"Poppins\",\"btn\":\"rgb(255, 255, 255)\",\"h2\":\"rgb(11, 18, 32)\"}"
+  },
+  {
+    "name": "[integration-desktop-1440] one H1 on full page",
+    "pass": true,
+    "detail": "1"
+  },
+  {
+    "name": "[integration-desktop-1440] disclaimer sits directly above footer",
+    "pass": true,
+    "detail": "gap 0px"
+  },
+  {
+    "name": "[integration-desktop-1440] no console errors from GTV widget",
+    "pass": true,
+    "detail": "1 unrelated site/third-party errors when served from localhost"
+  },
+  {
+    "name": "[integration-mobile-390] renders between existing header & footer",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "[integration-mobile-390] full-bleed width",
+    "pass": true,
+    "detail": "390px"
+  },
+  {
+    "name": "[integration-mobile-390] no horizontal overflow",
+    "pass": true,
+    "detail": "390/390"
+  },
+  {
+    "name": "[integration-mobile-390] theme CSS does not override widget styles",
+    "pass": true,
+    "detail": "{\"font\":\"Poppins\",\"btn\":\"rgb(255, 255, 255)\",\"h2\":\"rgb(11, 18, 32)\"}"
+  },
+  {
+    "name": "[integration-mobile-390] one H1 on full page",
+    "pass": true,
+    "detail": "1"
+  },
+  {
+    "name": "[integration-mobile-390] disclaimer sits directly above footer",
+    "pass": true,
+    "detail": "gap 0px"
+  },
+  {
+    "name": "[integration-mobile-390] no console errors from GTV widget",
+    "pass": true,
+    "detail": "1 unrelated site/third-party errors when served from localhost"
+  },
+  {
+    "name": "[integration 1440] sticky CTA placed (gtv-hcta-docked  gtv-hm-stack) without overlapping logo/nav/menu or growing the header",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-stack\",\"inHeader\":true,\"float\":false,\"visible\":true,\"inBar\":true,\"inView\":true,\"hit\":false,\"grew\":false,\"h\":40,\"href\":\"/contact-us/\",\"scrollW\":1440,\"text\":\"Book Free ConsultationFree ConsultationFreeConsultation→\"}"
+  },
+  {
+    "name": "[integration 1440] sticky CTA still visible after scrolling",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-stack\",\"inBar\":true,\"inView\":true,\"hit\":false}"
+  },
+  {
+    "name": "[integration 1440] sticky CTA -> booking destination, tappable, no overflow",
+    "pass": true,
+    "detail": "/contact-us/ h40 \"Book Free ConsultationFree ConsultationFreeConsultation→\""
+  },
+  {
+    "name": "[integration 1280] sticky CTA placed (gtv-hcta-float gtv-hcta-on gtv-hm-short) without overlapping logo/nav/menu or growing the header",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-float gtv-hcta-on gtv-hm-short\",\"inHeader\":false,\"float\":true,\"visible\":true,\"inBar\":false,\"inView\":true,\"hit\":false,\"grew\":false,\"h\":40,\"href\":\"/contact-us/\",\"scrollW\":1280,\"text\":\"Book Free ConsultationFree ConsultationFreeConsultation→\"}"
+  },
+  {
+    "name": "[integration 1280] sticky CTA still visible after scrolling",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-float gtv-hcta-on gtv-hm-short\",\"inBar\":false,\"inView\":true,\"hit\":false}"
+  },
+  {
+    "name": "[integration 1280] sticky CTA -> booking destination, tappable, no overflow",
+    "pass": true,
+    "detail": "/contact-us/ h40 \"Book Free ConsultationFree ConsultationFreeConsultation→\""
+  },
+  {
+    "name": "[integration 1200] sticky CTA placed (gtv-hcta-float gtv-hcta-on gtv-hm-short) without overlapping logo/nav/menu or growing the header",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-float gtv-hcta-on gtv-hm-short\",\"inHeader\":false,\"float\":true,\"visible\":true,\"inBar\":false,\"inView\":true,\"hit\":false,\"grew\":false,\"h\":40,\"href\":\"/contact-us/\",\"scrollW\":1200,\"text\":\"Book Free ConsultationFree ConsultationFreeConsultation→\"}"
+  },
+  {
+    "name": "[integration 1200] sticky CTA still visible after scrolling",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-float gtv-hcta-on gtv-hm-short\",\"inBar\":false,\"inView\":true,\"hit\":false}"
+  },
+  {
+    "name": "[integration 1200] sticky CTA -> booking destination, tappable, no overflow",
+    "pass": true,
+    "detail": "/contact-us/ h40 \"Book Free ConsultationFree ConsultationFreeConsultation→\""
+  },
+  {
+    "name": "[integration 1100] sticky CTA placed (gtv-hcta-docked  gtv-hm-stack) without overlapping logo/nav/menu or growing the header",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-stack\",\"inHeader\":true,\"float\":false,\"visible\":true,\"inBar\":true,\"inView\":true,\"hit\":false,\"grew\":false,\"h\":40,\"href\":\"/contact-us/\",\"scrollW\":1100,\"text\":\"Book Free ConsultationFree ConsultationFreeConsultation→\"}"
+  },
+  {
+    "name": "[integration 1100] sticky CTA still visible after scrolling",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-stack\",\"inBar\":true,\"inView\":true,\"hit\":false}"
+  },
+  {
+    "name": "[integration 1100] sticky CTA -> booking destination, tappable, no overflow",
+    "pass": true,
+    "detail": "/contact-us/ h40 \"Book Free ConsultationFree ConsultationFreeConsultation→\""
+  },
+  {
+    "name": "[integration 1025] sticky CTA placed (gtv-hcta-float gtv-hcta-on gtv-hm-short) without overlapping logo/nav/menu or growing the header",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-float gtv-hcta-on gtv-hm-short\",\"inHeader\":false,\"float\":true,\"visible\":true,\"inBar\":false,\"inView\":true,\"hit\":false,\"grew\":false,\"h\":40,\"href\":\"/contact-us/\",\"scrollW\":1025,\"text\":\"Book Free ConsultationFree ConsultationFreeConsultation→\"}"
+  },
+  {
+    "name": "[integration 1025] sticky CTA still visible after scrolling",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-float gtv-hcta-on gtv-hm-short\",\"inBar\":false,\"inView\":true,\"hit\":false}"
+  },
+  {
+    "name": "[integration 1025] sticky CTA -> booking destination, tappable, no overflow",
+    "pass": true,
+    "detail": "/contact-us/ h40 \"Book Free ConsultationFree ConsultationFreeConsultation→\""
+  },
+  {
+    "name": "[integration 1024] sticky CTA placed (gtv-hcta-docked  gtv-hm-full) without overlapping logo/nav/menu or growing the header",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-full\",\"inHeader\":true,\"float\":false,\"visible\":true,\"inBar\":true,\"inView\":true,\"hit\":false,\"grew\":false,\"h\":40,\"href\":\"/contact-us/\",\"scrollW\":1024,\"text\":\"Book Free ConsultationFree ConsultationFreeConsultation→\"}"
+  },
+  {
+    "name": "[integration 1024] sticky CTA still visible after scrolling",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-full\",\"inBar\":true,\"inView\":true,\"hit\":false}"
+  },
+  {
+    "name": "[integration 1024] sticky CTA -> booking destination, tappable, no overflow",
+    "pass": true,
+    "detail": "/contact-us/ h40 \"Book Free ConsultationFree ConsultationFreeConsultation→\""
+  },
+  {
+    "name": "[integration 768] sticky CTA placed (gtv-hcta-docked  gtv-hm-full) without overlapping logo/nav/menu or growing the header",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-full\",\"inHeader\":true,\"float\":false,\"visible\":true,\"inBar\":true,\"inView\":true,\"hit\":false,\"grew\":false,\"h\":40,\"href\":\"/contact-us/\",\"scrollW\":768,\"text\":\"Book Free ConsultationFree ConsultationFreeConsultation→\"}"
+  },
+  {
+    "name": "[integration 768] sticky CTA still visible after scrolling",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-full\",\"inBar\":true,\"inView\":true,\"hit\":false}"
+  },
+  {
+    "name": "[integration 768] sticky CTA -> booking destination, tappable, no overflow",
+    "pass": true,
+    "detail": "/contact-us/ h40 \"Book Free ConsultationFree ConsultationFreeConsultation→\""
+  },
+  {
+    "name": "[integration 430] sticky CTA placed (gtv-hcta-docked  gtv-hm-short) without overlapping logo/nav/menu or growing the header",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-short\",\"inHeader\":true,\"float\":false,\"visible\":true,\"inBar\":true,\"inView\":true,\"hit\":false,\"grew\":false,\"h\":40,\"href\":\"/contact-us/\",\"scrollW\":430,\"text\":\"Book Free ConsultationFree ConsultationFreeConsultation→\"}"
+  },
+  {
+    "name": "[integration 430] sticky CTA still visible after scrolling",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-short\",\"inBar\":true,\"inView\":true,\"hit\":false}"
+  },
+  {
+    "name": "[integration 430] sticky CTA -> booking destination, tappable, no overflow",
+    "pass": true,
+    "detail": "/contact-us/ h40 \"Book Free ConsultationFree ConsultationFreeConsultation→\""
+  },
+  {
+    "name": "[integration 390] sticky CTA placed (gtv-hcta-docked  gtv-hm-stack) without overlapping logo/nav/menu or growing the header",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-stack\",\"inHeader\":true,\"float\":false,\"visible\":true,\"inBar\":true,\"inView\":true,\"hit\":false,\"grew\":false,\"h\":40,\"href\":\"/contact-us/\",\"scrollW\":390,\"text\":\"Book Free ConsultationFree ConsultationFreeConsultation→\"}"
+  },
+  {
+    "name": "[integration 390] sticky CTA still visible after scrolling",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-stack\",\"inBar\":true,\"inView\":true,\"hit\":false}"
+  },
+  {
+    "name": "[integration 390] sticky CTA -> booking destination, tappable, no overflow",
+    "pass": true,
+    "detail": "/contact-us/ h40 \"Book Free ConsultationFree ConsultationFreeConsultation→\""
+  },
+  {
+    "name": "[integration 360] sticky CTA placed (gtv-hcta-docked  gtv-hm-stack) without overlapping logo/nav/menu or growing the header",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-stack\",\"inHeader\":true,\"float\":false,\"visible\":true,\"inBar\":true,\"inView\":true,\"hit\":false,\"grew\":false,\"h\":40,\"href\":\"/contact-us/\",\"scrollW\":360,\"text\":\"Book Free ConsultationFree ConsultationFreeConsultation→\"}"
+  },
+  {
+    "name": "[integration 360] sticky CTA still visible after scrolling",
+    "pass": true,
+    "detail": "{\"mode\":\"gtv-hcta-docked  gtv-hm-stack\",\"inBar\":true,\"inView\":true,\"hit\":false}"
+  },
+  {
+    "name": "[integration 360] sticky CTA -> booking destination, tappable, no overflow",
+    "pass": true,
+    "detail": "/contact-us/ h40 \"Book Free ConsultationFree ConsultationFreeConsultation→\""
+  }
+]
